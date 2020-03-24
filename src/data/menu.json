@@ -1,0 +1,708 @@
+[
+  {
+    "id": 1,
+    "title": "Базовые принципы",
+    "link": "overview",
+    "submenu": [
+      {
+        "id": 11,
+        "title": "Использование",
+        "link": "usage"
+      },
+      {
+        "id": 12,
+        "title": "Цвета",
+        "link": "colors"
+      },
+      {
+        "id": 13,
+        "title": "Сетка",
+        "link": "grid"
+      },
+      {
+        "id": 14,
+        "title": "Типографика",
+        "link": "typography"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "title": "Компоненты",
+    "link": "components",
+    "submenu": [
+      {
+        "id": 21,
+        "title": "Аватар",
+        "desc": "Аватары использоуются для отображения фотографии пользователя.",
+        "link": "avatar",
+        "install": ["npm install @bit/bcc.components.bcc-avatar"],
+        "version": "1.0.0",
+        "props": []
+      },
+      {
+        "id": 22,
+        "title": "Кнопка",
+        "desc": "Кнопки позволяют пользователям выполнять действия и делать выбор одним нажатием.",
+        "link": "button",
+        "install": ["npm install @bit/bcc.components.bcc-button"],
+        "version": "1.0.0",
+        "props": [
+          {
+            "id": 20001,
+            "name": "children *",
+            "type": "node",
+            "default": "",
+            "desc": "Содержание кнопки."
+          },
+          {
+            "id": 20002,
+            "name": "classes",
+            "type": "object",
+            "default": "",
+            "desc": "Переопределить или расширить стили, примененные к компоненту."
+          },
+          {
+            "id": 20003,
+            "name": "color",
+            "type": "default | inherit | primary | secondary",
+            "default": "default",
+            "desc": "Цвета компонента."
+          },
+          {
+            "id": 20004,
+            "name": "disabled",
+            "type": "bool",
+            "default": "false",
+            "desc": "Если true, копонента будет неактивна."
+          },
+          {
+            "id": 20005,
+            "name": "endIcon",
+            "type": "node",
+            "default": "",
+            "desc": "Элемент размещенный после дочерних."
+          },
+          {
+            "id": 20005,
+            "name": "fullWidth",
+            "type": "bool",
+            "default": "false",
+            "desc": "Если true, копонента будет на всю ширину его контейнера."
+          },
+          {
+            "id": 20006,
+            "name": "href",
+            "type": "string",
+            "default": "",
+            "desc": "URL ссылка перенаправляющая при нажатии."
+          },
+          {
+            "id": 20007,
+            "name": "size",
+            "type": "small | medium | large",
+            "default": "medium",
+            "desc": "Размер кнопки."
+          },
+          {
+            "id": 20008,
+            "name": "startIcon",
+            "type": "node",
+            "default": "",
+            "desc": "Элемент размещенный перед дочерним."
+          },
+          {
+            "id": 20009,
+            "name": "variant",
+            "type": "text | outlined | contained",
+            "default": "text",
+            "desc": "Варианты использования."
+          }
+        ]
+      },
+      {
+        "id": 23,
+        "title": "Текстовое поле",
+        "desc": "Текстовые поля позволяют пользователям вводить и редактировать текст.",
+        "link": "input",
+        "install": ["npm install @bit/bcc.components.bcc-input"],
+        "version": "1.0.0",
+        "props": [
+          {
+            "id": 30001,
+            "name": "autoFocus",
+            "type": "bool",
+            "default": "false",
+            "desc": "Если true, элемент input будет сфокусирован во время первого монтирования."
+          },
+          {
+            "id": 30002,
+            "name": "defaultValue",
+            "type": "any",
+            "default": "",
+            "desc": "Значение по умолчанию для элемента input."
+          },
+          {
+            "id": 30003,
+            "name": "disabled",
+            "type": "bool",
+            "default": "false",
+            "desc": "Если true, элемент input будет отключен."
+          },
+          {
+            "id": 30004,
+            "name": "error",
+            "type": "bool",
+            "default": "false",
+            "desc": "Если true, метка будет отображаться в состоянии ошибки."
+          },
+          {
+            "id": 30005,
+            "name": "fullWidth",
+            "type": "bool",
+            "default": "false",
+            "desc": "Если true, input будет занимать всю ширину своего контейнера."
+          },
+          {
+            "id": 30006,
+            "name": "helperText",
+            "type": "node",
+            "default": "",
+            "desc": "Вспомогательный текстовый контент."
+          },
+          {
+            "id": 30007,
+            "name": "helperText",
+            "type": "node",
+            "default": "",
+            "desc": "Вспомогательный текстовый контент."
+          },
+          {
+            "id": 30008,
+            "name": "inputRef",
+            "type": "ref",
+            "default": "",
+            "desc": "Передайте ref на элемент input."
+          },
+          {
+            "id": 30009,
+            "name": "label",
+            "type": "ref",
+            "default": "",
+            "desc": "Передайте ref на элемент input."
+          },
+          {
+            "id": 300010,
+            "name": "margin",
+            "type": "none | dense | normal",
+            "default": "",
+            "desc": "Если dense или normal, то отрегулирует его вертикальное расстояние и содержащихся компонентов."
+          },
+          {
+            "id": 300011,
+            "name": "multiline",
+            "type": "bool",
+            "default": "false",
+            "desc": "Если true, элемент textarea будет отображаться вместо input"
+          },
+          {
+            "id": 300012,
+            "name": "name",
+            "type": "string",
+            "default": "",
+            "desc": "Атрибут имени элемента input."
+          },
+          {
+            "id": 300013,
+            "name": "onChange",
+            "type": "func",
+            "default": "",
+            "desc": "Callback срабатывает при изменении значения."
+          },
+          {
+            "id": 300014,
+            "name": "placeholder",
+            "type": "string",
+            "default": "",
+            "desc": "Краткая подсказка, отображаемая на входе до того, как пользователь вводит значение."
+          },
+          {
+            "id": 300015,
+            "name": "required",
+            "type": "bool",
+            "default": "false",
+            "desc": "Если true, поле input отображается как обязательное."
+          },
+          {
+            "id": 300016,
+            "name": "rows",
+            "type": "string | number",
+            "default": "",
+            "desc": "Количество строк, отображаемых, когда для параметра multiline установлено значение true."
+          },
+          {
+            "id": 300017,
+            "name": "rowsMax",
+            "type": "string | number",
+            "default": "",
+            "desc": "Максимальное количество строк, отображаемых, когда для параметра multiline установлено значение true."
+          },
+          {
+            "id": 300018,
+            "name": "select",
+            "type": "bool",
+            "default": "false",
+            "desc": "Визуализация элемента Select при передаче элемента Input в качестве параметра ввода Select. Если эта опция установлена, вы должны передать опции выбора как дочерние."
+          },
+          {
+            "id": 300019,
+            "name": "size",
+            "type": "small | medium",
+            "default": "",
+            "desc": "Размер текстового поля."
+          },
+          {
+            "id": 300020,
+            "name": "type",
+            "type": "string",
+            "default": "",
+            "desc": "Тип элемента ввода. Это должен быть допустимый тип ввода HTML5."
+          },
+          {
+            "id": 300021,
+            "name": "value",
+            "type": "any",
+            "default": "",
+            "desc": "Значение элемента input, обязательное для контролируемого компонента."
+          }
+        ]
+      },
+      {
+        "id": 24,
+        "title": "Checkbox",
+        "desc": "Чекбоксы позволяют выбрать один или несколько элементов из набора.",
+        "link": "checkbox",
+        "install": ["npm install @bit/bcc.components.bcc-checkbox"],
+        "version": "1.0.0",
+        "props": [
+          {
+            "id": 40001,
+            "name": "checked",
+            "type": "bool",
+            "default": "",
+            "desc": "Если true, компонент отмечен."
+          },
+          {
+            "id": 40002,
+            "name": "checkedIcon",
+            "type": "node",
+            "default": "<CheckBoxIcon />",
+            "desc": "Значок, отображаемый при у отмеченного компонента."
+          },
+          {
+            "id": 40003,
+            "name": "disabled",
+            "type": "bool",
+            "default": "",
+            "desc": "Если true, checkbox будет не активен."
+          },
+          {
+            "id": 40004,
+            "name": "icon",
+            "type": "node",
+            "default": "<CheckBoxOutlineBlankIcon />",
+            "desc": "Значок, отображаемый, когда компонент не отмечен."
+          },
+          {
+            "id": 40005,
+            "name": "id",
+            "type": "string",
+            "default": "false",
+            "desc": "Идентификатор элемента ввода."
+          },
+          {
+            "id": 40006,
+            "name": "indeterminate",
+            "type": "bool",
+            "default": "false",
+            "desc": "Если true, элемент выбран частично."
+          },
+          {
+            "id": 40007,
+            "name": "indeterminateIcon",
+            "type": "node",
+            "default": "<IndeterminateCheckBoxIcon />",
+            "desc": "Значок, отображаемый, когда компонент выбран частично."
+          },
+          {
+            "id": 40008,
+            "name": "onChange",
+            "type": "func",
+            "default": "<IndeterminateCheckBoxIcon />",
+            "desc": "Callback срабатывает при изменении состояния."
+          },
+          {
+            "id": 40009,
+            "name": "required",
+            "type": "bool",
+            "default": "",
+            "desc": "Значок, отображаемый, когда компонент выбран частично."
+          },
+          {
+            "id": 400010,
+            "name": "size",
+            "type": "small | medium",
+            "default": "medium",
+            "desc": "Размер флажка. small эквивалентно стилю dense флажка."
+          },
+          {
+            "id": 400011,
+            "name": "type",
+            "type": "string",
+            "default": "",
+            "desc": "Тип input компонента."
+          },
+          {
+            "id": 400012,
+            "name": "value",
+            "type": "any",
+            "default": "",
+            "desc": "Значение компонента."
+          }
+        ]
+      },
+      {
+        "id": 25,
+        "title": "Chip",
+        "desc": "Фишки - это компактные элементы, представляющие входные данные, атрибут или действие.",
+        "link": "chip",
+        "install": ["npm install @bit/bcc.components.bcc-chip"],
+        "version": "1.0.0",
+        "props": [
+          {
+            "id": 100001,
+            "name": "avatar",
+            "type": "element",
+            "default": "",
+            "desc": "Аватар элемент."
+          },
+          {
+            "id": 100002,
+            "name": "clickable",
+            "type": "bool",
+            "default": "",
+            "desc": "Если значение равно true, chip будет отображаться с возможностью нажатия и будет подниматься при нажатии, даже если свойство onClick не определено. Если false, chip не будет кликабельным, даже если аттрибут onClick определена."
+          },
+          {
+            "id": 100003,
+            "name": "deleteIcon",
+            "type": "element",
+            "default": "",
+            "desc": "Переопределить элемент значка удаления по умолчанию. Отображается только если установлено onDelete."
+          },
+          {
+            "id": 100004,
+            "name": "disabled",
+            "type": "bool",
+            "default": "false",
+            "desc": "Если это true, chip должен отображаться в отключенном состоянии."
+          },
+          {
+            "id": 100005,
+            "name": "icon",
+            "type": "element",
+            "default": "",
+            "desc": "Значок элемента."
+          },
+          {
+            "id": 100006,
+            "name": "label",
+            "type": "node",
+            "default": "",
+            "desc": "Текст фишки."
+          },
+          {
+            "id": 100007,
+            "name": "onDelete",
+            "type": "func",
+            "default": "",
+            "desc": "Callback функция срабатывает при нажатии на значок удаления. Если установлено, значок удаления будет отображаться."
+          },
+          {
+            "id": 100008,
+            "name": "onChange",
+            "type": "func",
+            "default": "<IndeterminateCheckBoxIcon />",
+            "desc": "Callback срабатывает при изменении состояния."
+          },
+          {
+            "id": 100009,
+            "name": "size",
+            "type": "small | medium",
+            "default": "medium",
+            "desc": "Размер фишки."
+          },
+          {
+            "id": 1000010,
+            "name": "variant",
+            "type": "default | outlined",
+            "default": "default",
+            "desc": "Вариант для использования."
+          }
+        ]
+      },
+      {
+        "id": 26,
+        "title": "Radio",
+        "desc": "Радиокнопки позволяют пользователю выбрать один вариант из набора.",
+        "link": "radio",
+        "install": ["npm install @bit/bcc.components.bcc-radio"],
+        "version": "1.0.0",
+        "props": [
+          {
+            "id": 50001,
+            "name": "checked",
+            "type": "bool",
+            "default": "",
+            "desc": "Если true, компонент отмечен."
+          },
+          {
+            "id": 50002,
+            "name": "checkedIcon",
+            "type": "node",
+            "default": "",
+            "desc": "Значок, отображаемый при у отмеченного компонента."
+          },
+          {
+            "id": 50003,
+            "name": "disabled",
+            "type": "bool",
+            "default": "",
+            "desc": "Если true, checkbox будет не активен."
+          },
+          {
+            "id": 50004,
+            "name": "icon",
+            "type": "node",
+            "default": "",
+            "desc": "Значок, отображаемый, когда компонент не отмечен."
+          },
+          {
+            "id": 50005,
+            "name": "id",
+            "type": "string",
+            "default": "false",
+            "desc": "Идентификатор элемента ввода."
+          },
+          {
+            "id": 50006,
+            "name": "name",
+            "type": "string",
+            "default": "",
+            "desc": "Аттрибут name элемента input"
+          },
+          {
+            "id": 50007,
+            "name": "onChange",
+            "type": "func",
+            "default": "",
+            "desc": "Callback срабатывает при изменении состояния."
+          },
+          {
+            "id": 50008,
+            "name": "required",
+            "type": "bool",
+            "default": "",
+            "desc": "Значок, отображаемый, когда компонент выбран частично."
+          },
+          {
+            "id": 50009,
+            "name": "size",
+            "type": "small | medium",
+            "default": "medium",
+            "desc": "Размер флажка. small эквивалентно стилю dense флажка."
+          },
+          {
+            "id": 500010,
+            "name": "type",
+            "type": "string",
+            "default": "",
+            "desc": "Тип input компонента."
+          },
+          {
+            "id": 500011,
+            "name": "value",
+            "type": "any",
+            "default": "",
+            "desc": "Значение компонента."
+          }
+        ]
+      },
+      {
+        "id": 27,
+        "title": "Дата / Время",
+        "desc": "Выбор даты и выбор времени обеспечивают простой способ выбора одного значения из заранее определенного набора.",
+        "link": "datetime",
+        "install": [
+          "npm install @bit/bcc.components.bcc-datetime-provider",
+          "npm install @bit/bcc.components.bcc-date-picker",
+          "npm install @bit/bcc.components.bcc-time-picker",
+          "npm install @bit/bcc.components.bcc-datetime-picker"
+        ],
+        "version": "1.0.0",
+        "props": []
+      },
+      {
+        "id": 28,
+        "title": "Select",
+        "desc": "Menus are positioned over their emitting elements such that the currently selected menu item appears on top of the emitting element.",
+        "link": "select",
+        "install": ["npm install @bit/bcc.components.bcc-select"],
+        "version": "1.0.0",
+        "props": []
+      },
+      {
+        "id": 29,
+        "title": "Slider",
+        "desc": "Ползунки позволяют пользователям выбирать из диапазона значений.",
+        "link": "slider",
+        "install": ["npm install @bit/bcc.components.bcc-slider"],
+        "version": "1.0.0",
+        "props": []
+      },
+      {
+        "id": 210,
+        "title": "Switch",
+        "desc": "Переключатели изменяют состояние одного отдельного параметра между 'включено' и 'выключено'.",
+        "link": "switch",
+        "install": ["npm install @bit/bcc.components.bcc-switch"],
+        "version": "1.0.0",
+        "props": []
+      },
+      {
+        "id": 211,
+        "title": "Collapse",
+        "desc": "Переключатели изменяют состояние одного отдельного параметра между 'включено' и 'выключено'.",
+        "link": "collapse",
+        "install": [
+          "npm install @bit/bcc.components.bcc-collapse-panel",
+          "npm install @bit/bcc.components.bcc-collapse-title",
+          "npm install @bit/bcc.components.bcc-collapse-details"
+        ],
+        "version": "1.0.0",
+        "props": []
+      },
+      {
+        "id": 212,
+        "title": "Tabs",
+        "desc": "Вкладки организуют и позволяют перемещаться между группами контента, которые связаны, и на том же уровне иерархии.",
+        "link": "tabs",
+        "install": [
+          "npm install @bit/bcc.components.bcc-tab",
+          "npm install @bit/bcc.components.bcc-tabs"
+        ],
+        "version": "1.0.0",
+        "props": []
+      },
+      {
+        "id": 213,
+        "title": "Stepper",
+        "desc": "Степперы передают прогресс через пронумерованные шаги. Он обеспечивает рабочий процесс в стиле мастера.",
+        "link": "stepper",
+        "install": [
+          "npm install @bit/bcc.components.bcc-stepper",
+          "npm install @bit/bcc.components.bcc-step",
+          "npm install @bit/bcc.components.bcc-step-label"
+        ],
+        "version": "1.0.0",
+        "props": []
+      },
+      {
+        "id": 223,
+        "title": "Breadcrumbs",
+        "desc": "Хлебные крошки позволяют пользователям выбирать из диапазона значений.",
+        "link": "breadcrumbs",
+        "install": ["npm install @bit/bcc.components.bcc-breadcrumbs"],
+        "version": "1.0.0",
+        "props": []
+      },
+      {
+        "id": 233,
+        "title": "Dialog",
+        "desc": "Диалоги информируют пользователей о задаче и могут содержать критическую информацию, требовать решения или включать несколько задач.",
+        "link": "dialog",
+        "install": [
+          "npm install @bit/bcc.components.bcc-dialog",
+          "npm install @bit/bcc.components.bcc-dialog-title",
+          "npm install @bit/bcc.components.bcc-content",
+          "npm install @bit/bcc.components.bcc-actions"
+        ],
+        "version": "1.0.0",
+        "props": []
+      },
+      {
+        "id": 243,
+        "title": "Popover",
+        "desc": "Popover может использоваться для отображения некоторого контента поверх другого.",
+        "link": "popover",
+        "install": ["npm install @bit/bcc.components.bcc-popover"],
+        "version": "1.0.0",
+        "props": []
+      },
+      {
+        "id": 253,
+        "title": "Tooltip",
+        "desc": "Всплывающие подсказки отображают информативный текст когда пользователь наводит курсор на элемент, фокусируется на нем или нажимает на него.",
+        "link": "tooltip",
+        "install": ["npm install @bit/bcc.components.bcc-tooltip"],
+        "version": "1.0.0",
+        "props": []
+      },
+      {
+        "id": 263,
+        "title": "Snackbar",
+        "desc": "Snackbars предоставляют краткие сообщения о процессах приложения. Компонент также известен как тост.",
+        "link": "snackbar",
+        "install": ["npm install @bit/bcc.components.bcc-snackbar"],
+        "version": "1.0.0",
+        "props": []
+      },
+      {
+        "id": 273,
+        "title": "Badge",
+        "desc": "Значок генерирует маленький значок в правом верхнем углу своего дочернего(их) элемента(ов).",
+        "link": "badge",
+        "install": ["npm install @bit/bcc.components.bcc-badge"],
+        "version": "1.0.0",
+        "props": []
+      },
+      {
+        "id": 283,
+        "title": "Alert",
+        "desc": "Alert показывает короткое и важное сообщение для того, чтобы привлечь внимание пользователя, не отвлекая его от задачи.",
+        "link": "alert",
+        "install": ["npm install @bit/bcc.components.bcc-alert"],
+        "version": "1.0.0",
+        "props": []
+      },
+      {
+        "id": 293,
+        "title": "Table",
+        "desc": "Таблицы отображают наборы данных. Они могут быть полностью модифицированы.",
+        "link": "table",
+        "install": ["npm install @bit/bcc.components.bcc-table"],
+        "version": "1.0.0",
+        "props": []
+      },
+      {
+        "id": 303,
+        "title": "Toggle Button",
+        "desc": "Toggle Button можно использовать для группировки связанных параметров.",
+        "link": "toggle",
+        "install": ["npm install @bit/bcc.components.bcc-toggle-button"],
+        "version": "1.0.0",
+        "props": []
+      }
+    ]
+  }
+]

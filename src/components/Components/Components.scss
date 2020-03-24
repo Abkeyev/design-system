@@ -1,0 +1,35 @@
+.elements {
+  display: flex;
+  flex-wrap: wrap;
+  & > * {
+    margin-right: 10px !important;
+    margin-bottom: 10px !important;
+    align-self: flex-start;
+  }
+  & > *:last-child {
+    margin-right: 0 !important;
+  }
+}
+.descTitle,
+.installTitle,
+.componentTitle,
+.componentDesc {
+  margin-bottom: 15px !important;
+}
+
+.desc,
+.install,
+.componentCode {
+  margin-bottom: 20px !important;
+}
+
+.componentCode {
+  margin-top: 15px !important;
+}
+
+.textChip {
+  background-color: #f5f2f0;
+  padding: 2px 6px;
+  font-weight: 300;
+  border-radius: 2px;
+}
