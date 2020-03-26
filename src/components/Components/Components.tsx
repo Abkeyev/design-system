@@ -276,7 +276,8 @@ import BccTooltip from '@bit/bcc.component.bcc-tooltip';`,
     {
       id: 2006,
       title: 'Кнопки с иконкой и текстом',
-      desc: 'Кнопки с иконкой и текстом',
+      desc:
+        'Кнопки можно использовать с иконкой и текстом для большей информации.',
       libs: `import SendIcon from '@material-ui/icons/Send';
 import CloudUploadIcon from '@material-ui/icons/CloudUpload';
 import SaveIcon from '@material-ui/icons/Save';`,
@@ -291,16 +292,12 @@ import SaveIcon from '@material-ui/icons/Save';`,
           </BccButton>
           <BccButton
             variant="contained"
-            color="default"
+            color="secondary"
             endIcon={<CloudUploadIcon />}
           >
             Загрузить
           </BccButton>
-          <BccButton
-            variant="contained"
-            color="primary"
-            startIcon={<SaveIcon />}
-          >
+          <BccButton variant="contained" disabled startIcon={<SaveIcon />}>
             Сохранить
           </BccButton>
         </>
@@ -314,23 +311,19 @@ import SaveIcon from '@material-ui/icons/Save';`,
 </BccButton>
 <BccButton
   variant="contained"
-  color="default"
+  color="secondary"
   endIcon={<CloudUploadIcon />}
 >
   Загрузить
 </BccButton>
-<BccButton
-  variant="contained"
-  color="primary"
-  startIcon={<SaveIcon />}
->
+<BccButton variant="contained" disabled startIcon={<SaveIcon />}>
   Сохранить
 </BccButton>`,
     },
     {
       id: 2007,
-      title: 'Кнопка с иконкой',
-      desc: 'Кнопка с иконкой',
+      title: 'Кнопка иконка',
+      desc: 'Кнопка иконка',
       libs: `import BccIconButton from '@bit/bcc.components.bcc-icon-button';
 import DeleteIcon from '@material-ui/icons/Delete';
 import AlarmIcon from '@material-ui/icons/Alarm';
@@ -417,7 +410,6 @@ import BccIconButton from '@bit/bcc.components.bcc-icon-button';`,
           />
           <label htmlFor="upload3">
             <BccIconButton
-              size="small"
               color="primary"
               aria-label="upload picture"
               component="span"

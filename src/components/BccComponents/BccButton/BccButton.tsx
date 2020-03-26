@@ -56,17 +56,15 @@ const BccButton = withStyles({
         },
       },
     },
-    '&.MuiButton-containedSizeSmall': {
+    '&.MuiButton-sizeSmall': {
       height: 48,
       fontSize: 16,
       lineHeight: '48px',
-      padding: 0,
     },
-    '&.MuiButton-containedSizeLarge': {
+    '&.MuiButton-sizeLarge': {
       height: 64,
       fontSize: 18,
       lineHeight: '64px',
-      padding: 0,
     },
     '&:focus': {
       boxShadow: 'none',
