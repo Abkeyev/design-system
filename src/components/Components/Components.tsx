@@ -189,56 +189,57 @@ import BccTooltip from '@bit/bcc.component.bcc-tooltip';`,
   button: [
     {
       id: 2001,
-      title: 'Блочные кнопки',
+      title: 'Стандартные кнопки',
       desc:
-        'Блочные кнопки имеют высокий акцент, отличаются использованием возвышения и заполнения. Они содержат действия, которые являются основными для вашего приложения.',
+        'Стандартные кнопки имеют высокий акцент, отличаются использованием основного цвета для заполнения. Они содержат действия, которые являются основными для вашего приложения. Есть два варианта использование primary и secondary.',
       component: wrapComponents(
         <>
           <BccButton variant="contained" color="primary">
-            Primary
+            Заказать карту
+          </BccButton>
+          <BccButton variant="contained" color="secondary">
+            Заказать карту
           </BccButton>
           <BccButton variant="contained" disabled>
-            Disabled
+            Заказать карту
           </BccButton>
         </>
       ),
-      code: `<BccButton variant='contained' color='primary'>Primary</BccButton>
-<BccButton variant='contained' disabled>Disabled</BccButton>`,
+      code: `<BccButton variant='contained' color='primary'>Заказать карту</BccButton>
+<BccButton variant='contained' color='secondary'>Заказать карту</BccButton>
+<BccButton variant='contained' disabled>Заказать карту</BccButton>`,
     },
     {
       id: 2002,
       title: 'Тестовые кнопки',
       desc:
-        'Текстовые кнопки обычно используются для менее выраженных действий',
+        'Текстовые кнопки обычно используются для менее выраженных действий. Не имеет других вариантов цветов.',
       component: wrapComponents(
         <>
-          <BccButton variant="text" color="primary">
-            Primary
-          </BccButton>
-          <BccButton variant="text" color="secondary">
-            Secondary
-          </BccButton>
+          <BccButton variant="text">Все карты (4)</BccButton>
           <BccButton variant="text" disabled>
-            Disabled
+            Все карты (4)
           </BccButton>
         </>
       ),
-      code: `<BccButton variant='text' color='primary'>Primary</BccButton>
-<BccButton variant='text' color='secondary'>Secondary</BccButton>
-<BccButton variant='text' disabled>Disabled</BccButton>`,
+      code: `<BccButton variant='text'>Все карты (4)</BccButton>
+<BccButton variant='text' disabled>Все карты (4)</BccButton>`,
     },
     {
       id: 2003,
       title: 'Контурные кнопки',
       desc:
-        'Текстовые кнопки обычно используются для менее выраженных действий',
+        'Контурные кнопки обычно используются при случае когда основная кнопка сливается с фоном или не соответствует стилю.',
       component: wrapComponents(
         <>
           <BccButton variant="outlined" color="primary">
-            Primary
+            Заказать карту
+          </BccButton>
+          <BccButton variant="outlined" color="secondary">
+            Заказать карту
           </BccButton>
           <BccButton variant="outlined" disabled>
-            Disabled
+            Заказать карту
           </BccButton>
         </>
       ),

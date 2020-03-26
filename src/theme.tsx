@@ -52,13 +52,13 @@ export default createMuiTheme({
   },
   palette: {
     primary: {
-      light: '#52BE80',
+      light: '#7DCEA0',
       main: '#27AE60',
       dark: '#1F7042',
     },
     secondary: {
-      light: '#E9F7EF',
-      main: '#BEEBD1',
+      main: '#E9F7EF',
+      dark: '#BEEBD1',
     },
     info: {
       main: '#28759A',
@@ -67,7 +67,7 @@ export default createMuiTheme({
       main: '#C84F4F',
     },
     grey: {
-      50: '#FAFAFA', //background
+      50: '#F3F3F3', //background
       100: '#E6E7E8', //disabled
       200: '#CCCFD1', //border
       300: '#B3B6BA',

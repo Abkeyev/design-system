@@ -12,9 +12,50 @@ const BccButton = withStyles({
     boxShadow: 'none',
     height: 56,
     fontSize: 16,
-    padding: '0 20px',
+    padding: '0 24px',
     lineHeight: '56px',
     letterSpacing: 0,
+    '&.Mui-focusVisible': {
+      boxShadow: 'none',
+    },
+    '&.MuiButton-containedPrimary': {
+      '&.Mui-focusVisible': {
+        '&::before': {
+          content: '" "',
+          border: '1px solid',
+          borderColor: theme.palette.common.white,
+          position: 'absolute',
+          left: 5,
+          right: 5,
+          bottom: 5,
+          top: 5,
+          borderRadius: 4,
+        },
+      },
+    },
+    '&.MuiButton-containedSecondary': {
+      color: theme.palette.primary.dark,
+      backgroundColor: theme.palette.secondary.main,
+      '&:hover': {
+        backgroundColor: theme.palette.secondary.dark,
+      },
+      '&:active': {
+        backgroundColor: theme.palette.primary.light,
+      },
+      '&.Mui-focusVisible': {
+        '&::before': {
+          content: '" "',
+          border: '1px solid',
+          borderColor: theme.palette.primary.light,
+          position: 'absolute',
+          left: 5,
+          right: 5,
+          bottom: 5,
+          top: 5,
+          borderRadius: 4,
+        },
+      },
+    },
     '&.MuiButton-containedSizeSmall': {
       height: 48,
       fontSize: 16,
@@ -35,20 +76,15 @@ const BccButton = withStyles({
       boxShadow: 'none',
     },
     '&.Mui-disabled': {
-      backgroundColor: theme.palette.grey[100],
-      color: theme.palette.grey[400],
+      backgroundColor: theme.palette.grey[50],
+      color: theme.palette.grey[300],
     },
     '&:active': {
       boxShadow: 'none',
       backgroundColor: '#1F7042',
     },
     '&.MuiButton-text': {
-      '&.Mui-disabled': {
-        background: 'none',
-        color: theme.palette.grey[400],
-      },
-    },
-    '&.MuiButton-textPrimary': {
+      textTransform: 'uppercase',
       color: theme.palette.primary.main,
       '&:hover': {
         background: 'none',
@@ -58,34 +94,69 @@ const BccButton = withStyles({
         boxShadow: 'none',
         background: 'none',
       },
-    },
-    '&.MuiButton-textSecondary': {
-      color: theme.palette.info.main,
-      '&:hover': {
-        background: 'none',
-        color: '#1a526d',
+      '&.Mui-focusVisible': {
+        background: theme.palette.grey[50],
       },
-      '&:active': {
-        boxShadow: 'none',
+      '&.Mui-disabled': {
         background: 'none',
+        color: theme.palette.grey[200],
       },
     },
     '&.MuiButton-outlined': {
-      backgroundColor: theme.palette.common.white,
-      border: '1px solid',
-      borderColor: theme.palette.grey[200],
-      color: theme.palette.primary.main,
+      '&.Mui-disabled': {
+        backgroundColor: theme.palette.grey[50],
+        color: theme.palette.grey[300],
+        border: 'none',
+      },
+    },
+    '&.MuiButton-outlinedPrimary': {
+      backgroundColor: theme.palette.grey[50],
+      border: 'none',
+      color: theme.palette.grey[600],
       '&:hover': {
-        borderColor: theme.palette.primary.main,
+        backgroundColor: theme.palette.grey[200],
       },
       '&:active': {
-        backgroundColor: theme.palette.primary.main,
-        color: theme.palette.common.white,
+        backgroundColor: theme.palette.grey[300],
       },
-      '&.Mui-disabled': {
-        backgroundColor: theme.palette.grey[100],
-        color: theme.palette.grey[400],
-        borderColor: theme.palette.grey[200],
+      '&.Mui-focusVisible': {
+        '&::before': {
+          content: '" "',
+          border: '1px solid',
+          borderColor: theme.palette.grey[200],
+          position: 'absolute',
+          left: 5,
+          right: 5,
+          bottom: 5,
+          top: 5,
+          borderRadius: 4,
+        },
+      },
+    },
+    '&.MuiButton-outlinedSecondary': {
+      color: theme.palette.grey[600],
+      border: '1px solid',
+      borderColor: theme.palette.grey[200],
+      background: 'none',
+      '&:hover': {
+        borderColor: theme.palette.grey[600],
+        backgroundColor: 'rgba(0,0,0,0)',
+      },
+      '&:active': {
+        backgroundColor: theme.palette.grey[50],
+      },
+      '&.Mui-focusVisible': {
+        '&::before': {
+          content: '" "',
+          border: '1px solid',
+          borderColor: theme.palette.grey[200],
+          position: 'absolute',
+          left: 5,
+          right: 5,
+          bottom: 5,
+          top: 5,
+          borderRadius: 4,
+        },
       },
     },
   },

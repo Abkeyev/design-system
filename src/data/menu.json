@@ -43,21 +43,14 @@
       {
         "id": 22,
         "title": "Кнопка",
-        "desc": "Кнопки позволяют пользователям выполнять действия и делать выбор одним нажатием.",
+        "desc": "Кнопки позволяют пользователям выполнять действия и делать выбор одним нажатием, существует три варианта использование contained, text и outlined.",
         "link": "button",
         "install": ["npm install @bit/bcc.components.bcc-button"],
         "version": "1.0.0",
         "props": [
           {
-            "id": 20001,
-            "name": "children *",
-            "type": "node",
-            "default": "",
-            "desc": "Содержание кнопки."
-          },
-          {
             "id": 20002,
-            "name": "classes",
+            "name": "className",
             "type": "object",
             "default": "",
             "desc": "Переопределить или расширить стили, примененные к компоненту."
@@ -65,7 +58,7 @@
           {
             "id": 20003,
             "name": "color",
-            "type": "default | inherit | primary | secondary",
+            "type": "primary | secondary",
             "default": "default",
             "desc": "Цвета компонента."
           },
@@ -74,7 +67,7 @@
             "name": "disabled",
             "type": "bool",
             "default": "false",
-            "desc": "Если true, копонента будет неактивна."
+            "desc": "Если true, компонент будет неактивен."
           },
           {
             "id": 20005,
