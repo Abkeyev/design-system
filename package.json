@@ -72,7 +72,7 @@
     "start:js": "react-scripts start",
     "start": "npm-run-all -p watch:css start:js",
     "build:js": "react-scripts build",
-    "build": "npm-run-all build:*",
+    "build": "react-scripts build",
     "test": "react-scripts test",
     "lint": "eslint --ext .js,.jsx,.ts,.tsx ./",
     "fix": "eslint --ext .js,.jsx,.ts,.tsx  --fix ./"
