@@ -1,13 +1,12 @@
 import { withStyles } from '@material-ui/core/styles'
 import Button from '@material-ui/core/Button'
-import theme from '../../../theme'
 import React from 'react'
 
 const BccButton = withStyles({
   root: {
     borderRadius: 4,
     fontWeight: 'normal',
-    color: theme.palette.common.white,
+    color: 'white',
     textTransform: 'none',
     boxShadow: 'none',
     height: 56,
@@ -19,11 +18,13 @@ const BccButton = withStyles({
       boxShadow: 'none',
     },
     '&.MuiButton-containedPrimary': {
+      color: 'white',
+      backgroundColor: '#27AE60',
       '&.Mui-focusVisible': {
         '&::before': {
           content: '" "',
           border: '1px solid',
-          borderColor: theme.palette.common.white,
+          borderColor: 'white',
           position: 'absolute',
           left: 5,
           right: 5,
@@ -34,19 +35,19 @@ const BccButton = withStyles({
       },
     },
     '&.MuiButton-containedSecondary': {
-      color: theme.palette.primary.dark,
-      backgroundColor: theme.palette.secondary.main,
+      color: '#1F7042',
+      backgroundColor: '#E9F7EF',
       '&:hover': {
-        backgroundColor: theme.palette.secondary.dark,
+        backgroundColor: '#BEEBD1',
       },
       '&:active': {
-        backgroundColor: theme.palette.primary.light,
+        backgroundColor: '#7DCEA0',
       },
       '&.Mui-focusVisible': {
         '&::before': {
           content: '" "',
           border: '1px solid',
-          borderColor: theme.palette.primary.light,
+          borderColor: '#7DCEA0',
           position: 'absolute',
           left: 5,
           right: 5,
@@ -70,12 +71,12 @@ const BccButton = withStyles({
       boxShadow: 'none',
     },
     '&:hover': {
-      backgroundColor: theme.palette.primary.light,
+      backgroundColor: '#7DCEA0',
       boxShadow: 'none',
     },
     '&.Mui-disabled': {
-      backgroundColor: theme.palette.grey[50],
-      color: theme.palette.grey[300],
+      backgroundColor: '#F3F3F3',
+      color: '#B3B6BA',
     },
     '&:active': {
       boxShadow: 'none',
@@ -83,45 +84,45 @@ const BccButton = withStyles({
     },
     '&.MuiButton-text': {
       textTransform: 'uppercase',
-      color: theme.palette.primary.main,
+      color: '#27AE60',
       '&:hover': {
         background: 'none',
-        color: theme.palette.primary.dark,
+        color: '#1F7042',
       },
       '&:active': {
         boxShadow: 'none',
         background: 'none',
       },
       '&.Mui-focusVisible': {
-        background: theme.palette.grey[50],
+        background: '#F3F3F3',
       },
       '&.Mui-disabled': {
         background: 'none',
-        color: theme.palette.grey[200],
+        color: '#CCCFD1',
       },
     },
     '&.MuiButton-outlined': {
       '&.Mui-disabled': {
-        backgroundColor: theme.palette.grey[50],
-        color: theme.palette.grey[300],
+        backgroundColor: '#F3F3F3',
+        color: '#B3B6BA',
         border: 'none',
       },
     },
     '&.MuiButton-outlinedPrimary': {
-      backgroundColor: theme.palette.grey[50],
+      backgroundColor: '#F3F3F3',
       border: 'none',
-      color: theme.palette.grey[600],
+      color: '#000D1A',
       '&:hover': {
-        backgroundColor: theme.palette.grey[200],
+        backgroundColor: '#CCCFD1',
       },
       '&:active': {
-        backgroundColor: theme.palette.grey[300],
+        backgroundColor: '#B3B6BA',
       },
       '&.Mui-focusVisible': {
         '&::before': {
           content: '" "',
           border: '1px solid',
-          borderColor: theme.palette.grey[200],
+          borderColor: '#CCCFD1',
           position: 'absolute',
           left: 5,
           right: 5,
@@ -132,22 +133,22 @@ const BccButton = withStyles({
       },
     },
     '&.MuiButton-outlinedSecondary': {
-      color: theme.palette.grey[600],
+      color: '#000D1A',
       border: '1px solid',
-      borderColor: theme.palette.grey[200],
+      borderColor: '#CCCFD1',
       background: 'none',
       '&:hover': {
-        borderColor: theme.palette.grey[600],
+        borderColor: '#000D1A',
         backgroundColor: 'rgba(0,0,0,0)',
       },
       '&:active': {
-        backgroundColor: theme.palette.grey[50],
+        backgroundColor: '#F3F3F3',
       },
       '&.Mui-focusVisible': {
         '&::before': {
           content: '" "',
           border: '1px solid',
-          borderColor: theme.palette.grey[200],
+          borderColor: '#CCCFD1',
           position: 'absolute',
           left: 5,
           right: 5,
@@ -158,6 +159,6 @@ const BccButton = withStyles({
       },
     },
   },
-})((props: any) => <Button {...props} />)
+})((props: any) => <Button disableRipple color="primary" {...props} />)
 
 export default BccButton

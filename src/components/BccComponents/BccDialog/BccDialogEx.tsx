@@ -1,73 +1,10 @@
 import React from 'react'
-import {
-  createStyles,
-  Theme,
-  withStyles,
-  WithStyles,
-} from '@material-ui/core/styles'
-import Button from '@material-ui/core/Button'
-import {
-  BccDialog,
-  BccDialogActions,
-  BccDialogTitle,
-  BccDialogContent,
-  BccButton,
-  BccTypography,
-} from '../../BccComponents'
-import IconButton from '@material-ui/core/IconButton'
-import CloseIcon from '@material-ui/icons/Close'
-import Typography from '@material-ui/core/Typography'
-
-const styles = (theme: Theme) =>
-  createStyles({
-    root: {
-      margin: 0,
-      padding: theme.spacing(2),
-    },
-    closeButton: {
-      position: 'absolute',
-      right: theme.spacing(1),
-      top: theme.spacing(1),
-      color: theme.palette.grey[500],
-    },
-  })
-
-export interface DialogTitleProps extends WithStyles<typeof styles> {
-  id: string
-  children: React.ReactNode
-  onClose: () => void
-}
-
-const DialogTitle = withStyles(styles)((props: DialogTitleProps) => {
-  const { children, classes, onClose, ...other } = props
-  return (
-    <BccDialogTitle disableTypography className={classes.root} {...other}>
-      <Typography variant="h6">{children}</Typography>
-      {onClose ? (
-        <IconButton
-          aria-label="close"
-          className={classes.closeButton}
-          onClick={onClose}
-        >
-          <CloseIcon />
-        </IconButton>
-      ) : null}
-    </BccDialogTitle>
-  )
-})
-
-const DialogContent = withStyles((theme: Theme) => ({
-  root: {
-    padding: theme.spacing(2),
-  },
-}))(BccDialogContent)
-
-const DialogActions = withStyles((theme: Theme) => ({
-  root: {
-    margin: 0,
-    padding: theme.spacing(1),
-  },
-}))(BccDialogActions)
+import BccDialog from '@bit/bcc.components.bcc-dialog'
+import BccDialogActions from '@bit/bcc.components.bcc-dialog-actions'
+import BccDialogTitle from '@bit/bcc.components.bcc-dialog-title'
+import BccDialogContent from '@bit/bcc.components.bcc-dialog-content'
+import BccButton from '@bit/bcc.components.bcc-button'
+import BccTypography from '@bit/bcc.components.bcc-typography'
 
 export default function CustomizedDialogs() {
   const [open, setOpen] = React.useState(false)
@@ -85,19 +22,20 @@ export default function CustomizedDialogs() {
         Открыть
       </BccButton>
       <BccDialog
+        fullScreen
         onClose={handleClose}
         aria-labelledby="customized-dialog-title"
         open={open}
       >
-        <DialogTitle id="customized-dialog-title" onClose={handleClose}>
+        <BccDialogTitle id="customized-dialog-title" onClose={handleClose}>
           <BccTypography type="h5">Заголовок</BccTypography>
-        </DialogTitle>
-        <DialogContent dividers>
+        </BccDialogTitle>
+        <BccDialogContent dividers>
           <BccTypography type="p1">
             Сохранить введенные вами данные и перейти к следуюшему шагу?
           </BccTypography>
-        </DialogContent>
-        <DialogActions>
+        </BccDialogContent>
+        <BccDialogActions>
           <BccButton
             autoFocus
             onClick={handleClose}
@@ -107,7 +45,7 @@ export default function CustomizedDialogs() {
           >
             Надпись
           </BccButton>
-        </DialogActions>
+        </BccDialogActions>
       </BccDialog>
     </div>
   )

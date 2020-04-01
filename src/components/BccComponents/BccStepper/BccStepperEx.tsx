@@ -1,14 +1,10 @@
 import React from 'react'
 import { makeStyles, Theme, createStyles } from '@material-ui/core/styles'
-import {
-  BccStepper,
-  BccStep,
-  BccStepLabel,
-  BccStepperConnector,
-  BccStepIcon,
-} from '../../BccComponents'
-import Button from '@material-ui/core/Button'
-import Typography from '@material-ui/core/Typography'
+import BccStepLabel from '@bit/bcc.components.bcc-step-label'
+import BccStepper from '@bit/bcc.components.bcc-stepper'
+import BccStep from '@bit/bcc.components.bcc-step'
+import BccButton from '@bit/bcc.components.bcc-button'
+import BccTypography from '@bit/bcc.components.bcc-typography'
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
@@ -26,27 +22,23 @@ const useStyles = makeStyles((theme: Theme) =>
 )
 
 function getSteps() {
-  return [
-    'Select master blaster campaign settings',
-    'Create an ad group',
-    'Create an ad',
-  ]
+  return ['Личные данные', 'Контакты', 'Печать']
 }
 
 function getStepContent(stepIndex: number) {
   switch (stepIndex) {
     case 0:
-      return 'Select campaign settings...'
+      return 'Заполните личные данные'
     case 1:
-      return 'What is an ad group anyways?'
+      return 'Заполните контакты'
     case 2:
-      return 'This is the bit I really care about!'
+      return 'Распечатать'
     default:
-      return 'Unknown stepIndex'
+      return 'Ошибка'
   }
 }
 
-export default function HorizontalLabelPositionBelowStepper() {
+const BccStepperEx = () => {
   const classes = useStyles()
   const [activeStep, setActiveStep] = React.useState(0)
   const steps = getSteps()
@@ -65,11 +57,7 @@ export default function HorizontalLabelPositionBelowStepper() {
 
   return (
     <div className={classes.root}>
-      <BccStepper
-        activeStep={activeStep}
-        alternativeLabel
-        connector={<BccStepperConnector />}
-      >
+      <BccStepper activeStep={activeStep}>
         {steps.map(label => (
           <BccStep key={label}>
             <BccStepLabel>{label}</BccStepLabel>
@@ -79,27 +67,31 @@ export default function HorizontalLabelPositionBelowStepper() {
       <div>
         {activeStep === steps.length ? (
           <div>
-            <Typography className={classes.instructions}>
-              All steps completed
-            </Typography>
-            <Button onClick={handleReset}>Reset</Button>
+            <BccTypography type="p3" className={classes.instructions}>
+              Все завершено!
+            </BccTypography>
+            <BccButton onClick={handleReset}>К началу</BccButton>
           </div>
         ) : (
           <div>
-            <Typography className={classes.instructions}>
+            <BccTypography type="p3" className={classes.instructions}>
               {getStepContent(activeStep)}
-            </Typography>
+            </BccTypography>
             <div>
-              <Button
+              <BccButton
                 disabled={activeStep === 0}
                 onClick={handleBack}
                 className={classes.backButton}
               >
-                Back
-              </Button>
-              <Button variant="contained" color="primary" onClick={handleNext}>
-                {activeStep === steps.length - 1 ? 'Finish' : 'Next'}
-              </Button>
+                Назад
+              </BccButton>
+              <BccButton
+                variant="contained"
+                color="primary"
+                onClick={handleNext}
+              >
+                {activeStep === steps.length - 1 ? 'Завершить' : 'Далее'}
+              </BccButton>
             </div>
           </div>
         )}
@@ -107,3 +99,5 @@ export default function HorizontalLabelPositionBelowStepper() {
     </div>
   )
 }
+
+export default BccStepperEx

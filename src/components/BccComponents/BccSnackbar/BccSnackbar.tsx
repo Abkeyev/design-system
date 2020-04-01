@@ -1,8 +1,7 @@
 import React from 'react'
 import { withStyles } from '@material-ui/core/styles'
 import Snackbar from '@material-ui/core/Snackbar'
-import theme from '../../../theme'
 
-const BccSnackbar = withStyles({})(Snackbar)
+const BccSnackbar = withStyles({})((props: any) => <Snackbar {...props} />)
 
 export default BccSnackbar

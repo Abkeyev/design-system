@@ -1,72 +1,76 @@
 import { withStyles } from '@material-ui/core/styles'
 import TextField from '@material-ui/core/TextField'
-import theme from '../../../theme'
 import React from 'react'
 
 const BccInput = withStyles({
   root: {
     '& .MuiInputBase-root': {
-      color: theme.palette.grey[600],
+      color: '#000D1A',
+      fontSize: '16px',
     },
     '& .MuiFormHelperText-contained': {
       marginLeft: 0,
     },
     '& label.Mui-focused': {
-      color: theme.palette.primary.main,
+      color: '#27AE60',
     },
     '& .MuiInputLabel-outlined': {
-      color: theme.palette.grey[500],
+      color: '#4D565F',
       '&.Mui-focused': {
-        color: theme.palette.grey[500],
+        color: '#4D565F',
         '&.Mui-error': {
-          color: theme.palette.error.main,
+          color: '#C84F4F',
         },
       },
     },
+    '& .MuiInputLabel-shrink.MuiInputLabel-filled': {
+      fontSize: 13,
+      color: '#4D565F',
+    },
     '& .MuiInputLabel-filled': {
-      color: theme.palette.grey[500],
+      color: '#4D565F',
       '&.Mui-focused': {
-        color: theme.palette.grey[500],
+        color: '#4D565F',
         '&.Mui-error': {
-          color: theme.palette.error.main,
+          color: '#C84F4F',
         },
       },
     },
     '& .MuiInput-underline:hover': {
       '&:before': {
-        borderBottomColor: theme.palette.primary.main,
+        borderBottomColor: '#27AE60',
       },
     },
     '& .MuiInput-underline:before': {
-      borderBottomColor: theme.palette.primary.main,
+      borderBottomColor: '#27AE60',
     },
     '& .MuiInput-underline:after': {
-      borderBottomColor: theme.palette.primary.main,
+      borderBottomColor: '#27AE60',
     },
     '& .MuiOutlinedInput-root': {
       '& fieldset': {
         borderColor: '#E8E8E8',
       },
       '&:hover fieldset': {
-        borderColor: theme.palette.grey[400],
+        borderColor: '#80868C',
       },
       '&.Mui-focused fieldset': {
-        borderColor: theme.palette.primary.main,
+        borderColor: '#27AE60',
         borderWidth: 1,
       },
       '&.Mui-disabled fieldset': {
-        backgroundColor: theme.palette.grey[100],
+        backgroundColor: '#E6E7E8',
         border: 'none',
       },
       '&.Mui-error fieldset': {
-        borderColor: theme.palette.error.main,
+        borderColor: '#C84F4F',
       },
     },
     '& .MuiFilledInput-root': {
       background: 'none',
       border: '1px solid',
       borderRadius: 4,
-      borderColor: theme.palette.grey[200],
+      borderColor: '#CCCFD1',
       '&:before': {
         border: 'none',
       },
@@ -74,17 +78,17 @@ const BccInput = withStyles({
         border: 'none',
       },
       '&:hover': {
-        borderColor: theme.palette.grey[400],
+        borderColor: '#80868C',
       },
       '&.Mui-focused': {
-        borderColor: theme.palette.primary.main,
+        borderColor: '#27AE60',
       },
       '&.Mui-disabled': {
-        backgroundColor: theme.palette.grey[100],
+        backgroundColor: '#E6E7E8',
         border: 'none',
       },
       '&.Mui-error': {
-        borderColor: theme.palette.error.main,
+        borderColor: '#C84F4F',
       },
     },
   },

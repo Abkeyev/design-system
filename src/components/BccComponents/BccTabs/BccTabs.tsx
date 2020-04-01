@@ -1,16 +1,14 @@
 import Tabs from '@material-ui/core/Tabs'
+import React from 'react'
 import { withStyles } from '@material-ui/core/styles'
-import theme from '../../../theme'
 
 const BccTabs = withStyles({
   root: {
-    '& .MuiTabs-flexContainer': {
-      backgroundColor: theme.palette.grey[50],
-    },
     '& .MuiTabs-indicator': {
-      backgroundColor: theme.palette.primary.main,
+      height: 3,
+      backgroundColor: '#27AE60',
     },
   },
-})(Tabs)
+})((props: any) => <Tabs {...props} />)
 
 export default BccTabs

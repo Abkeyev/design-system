@@ -27,6 +27,37 @@
     "template.json"
   ],
   "dependencies": {
+    "@bit/bcc.components.bcc-alert": "^1.0.0",
+    "@bit/bcc.components.bcc-alert-title": "^1.0.0",
+    "@bit/bcc.components.bcc-badge": "^1.0.0",
+    "@bit/bcc.components.bcc-button": "^1.0.0",
+    "@bit/bcc.components.bcc-collapse-details": "^1.0.0",
+    "@bit/bcc.components.bcc-collapse-panel": "^1.0.0",
+    "@bit/bcc.components.bcc-collapse-title": "^1.0.0",
+    "@bit/bcc.components.bcc-dialog": "^1.0.0",
+    "@bit/bcc.components.bcc-dialog-actions": "^1.0.0",
+    "@bit/bcc.components.bcc-dialog-content": "^1.0.0",
+    "@bit/bcc.components.bcc-dialog-title": "^1.0.0",
+    "@bit/bcc.components.bcc-grid": "^1.0.0",
+    "@bit/bcc.components.bcc-icon-button": "^1.0.0",
+    "@bit/bcc.components.bcc-input": "^1.0.0",
+    "@bit/bcc.components.bcc-slider": "^1.0.0",
+    "@bit/bcc.components.bcc-snackbar": "^1.0.0",
+    "@bit/bcc.components.bcc-step": "^1.0.0",
+    "@bit/bcc.components.bcc-step-connector": "^1.0.0",
+    "@bit/bcc.components.bcc-step-label": "^1.0.0",
+    "@bit/bcc.components.bcc-stepper": "^1.0.0",
+    "@bit/bcc.components.bcc-tab": "^1.0.0",
+    "@bit/bcc.components.bcc-table": "^1.0.0",
+    "@bit/bcc.components.bcc-table-body": "^1.0.0",
+    "@bit/bcc.components.bcc-table-cell": "^1.0.0",
+    "@bit/bcc.components.bcc-table-container": "^1.0.0",
+    "@bit/bcc.components.bcc-table-head": "^1.0.0",
+    "@bit/bcc.components.bcc-table-row": "^1.0.0",
+    "@bit/bcc.components.bcc-tabs": "^1.0.0",
+    "@bit/bcc.components.bcc-toggle-button": "^1.0.0",
+    "@bit/bcc.components.bcc-toggle-button-group": "^1.0.0",
+    "@bit/bcc.components.bcc-typography": "^1.0.0",
     "@date-io/date-fns": "^1.3.13",
     "@date-io/moment": "^2.4.0",
     "@material-ui/core": "^4.9.1",
@@ -110,7 +141,7 @@
   },
   "bit": {
     "env": {
-      "compiler": "bit.envs/compilers/typescript@3.1.39"
+      "compiler": "bit.envs/compilers/typescript@3.1.40"
     },
     "componentsDefaultDirectory": "components/{name}",
     "packageManager": "npm"

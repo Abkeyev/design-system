@@ -4,6 +4,6 @@ import React from 'react'
 
 const BccDialogTitle = withStyles({
   root: {},
-})((props: any) => <DialogTitle {...props} />)
+})((props: any) => <DialogTitle disableTypography {...props} />)
 
 export default BccDialogTitle

@@ -1,12 +1,12 @@
 import FormLabel from '@material-ui/core/FormLabel'
 import { withStyles } from '@material-ui/core/styles'
-import theme from '../../../../theme'
 
 const BccFormLabel = withStyles({
   root: {
-    color: theme.palette.grey[500],
+    color: '#4D565F',
+    fontSize: 14,
     '&.Mui-error': {
-      color: theme.palette.error.main,
+      color: '#C84F4F',
     },
   },
 })(FormLabel)

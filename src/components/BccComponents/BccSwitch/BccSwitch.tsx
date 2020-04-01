@@ -1,14 +1,13 @@
 import React from 'react'
 import Switch, { SwitchClassKey, SwitchProps } from '@material-ui/core/Switch'
 import { withStyles, createStyles, Theme } from '@material-ui/core/styles'
-import theme from '../../../theme'
 
 interface Styles extends Partial<Record<SwitchClassKey, string>> {
-  focusVisible?: string;
+  focusVisible?: string
 }
 
 interface Props extends SwitchProps {
-  classes: Styles;
+  classes: Styles
 }
 
 const BccSwitch = withStyles((theme: Theme) =>
@@ -18,13 +17,13 @@ const BccSwitch = withStyles((theme: Theme) =>
       height: 16,
       padding: 0,
       margin: theme.spacing(1),
-      overflow: 'visible'
+      overflow: 'visible',
     },
     switchBase: {
       padding: 2,
       '&$checked': {
         transform: 'translateX(20px)',
-        color: theme.palette.common.white,
+        color: 'white',
         '& + $track': {
           backgroundColor: '#27AE60',
           opacity: 1,
@@ -48,7 +47,7 @@ const BccSwitch = withStyles((theme: Theme) =>
     },
     checked: {},
     focusVisible: {},
-  }),
+  })
 )(({ classes, ...props }: Props) => {
   return (
     <Switch
@@ -63,7 +62,7 @@ const BccSwitch = withStyles((theme: Theme) =>
       }}
       {...props}
     />
-  );
-});
+  )
+})
 
 export default BccSwitch

@@ -1,30 +1,29 @@
 import ToggleButton from '@material-ui/lab/ToggleButton'
 import React from 'react'
 import { withStyles } from '@material-ui/core/styles'
-import theme from '../../../theme'
 
 const BccToggleButton = withStyles({
   root: {
-    borderColor: theme.palette.primary.main,
+    borderColor: '#27AE60',
     '&:hover': {
-      backgroundColor: theme.palette.primary.main,
+      backgroundColor: '#27AE60',
       '& span': {
-        color: theme.palette.common.white,
+        color: 'white',
       },
     },
     '&.Mui-selected': {
-      backgroundColor: theme.palette.primary.main,
+      backgroundColor: '#27AE60',
       '&:hover': {
-        backgroundColor: theme.palette.primary.light,
+        backgroundColor: '#7DCEA0',
       },
       '& span': {
-        color: theme.palette.common.white,
+        color: 'white',
       },
     },
     '& span': {
-      color: theme.palette.primary.main,
+      color: '#27AE60',
     },
   },
-})(ToggleButton)
+})((props: any) => <ToggleButton disableFocusRipple disableRipple {...props} />)
 
 export default BccToggleButton

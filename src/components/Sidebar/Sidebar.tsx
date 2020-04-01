@@ -8,9 +8,6 @@ import ListItemIcon from '@material-ui/core/ListItemIcon'
 import ListItemText from '@material-ui/core/ListItemText'
 import Collapse from '@material-ui/core/Collapse'
 import ColorLensIcon from '@material-ui/icons/ColorLens'
-import { BccInput } from '../BccComponents'
-import InputAdornment from '@material-ui/core/InputAdornment'
-import SearchIcon from '@material-ui/icons/Search'
 
 export interface Component {
   id: number
@@ -83,7 +80,10 @@ export const Sidebar = (props: any) => {
       <div className="sidebar">
         <NavLink onClick={() => setItem('', '')} to="/">
           <div className="logo">
-            <img src="logo-green.svg" alt="BCC Logo" />
+            <img
+              src={process.env.PUBLIC_URL + '/logo-green.svg'}
+              alt="BCC Logo"
+            />
           </div>
         </NavLink>
         <div className="menu">
@@ -97,7 +97,7 @@ export const Sidebar = (props: any) => {
                 <>
                   <ListItem
                     className={
-                      props.parent && props.parent.id == m.id ? 'active' : ''
+                      props.parent && props.parent.id === m.id ? 'active' : ''
                     }
                     key={m.id}
                     button
@@ -120,7 +120,7 @@ export const Sidebar = (props: any) => {
                             className={classes.nested}
                           >
                             <ListItemText
-                              className={props.menuId == m.id ? 'active' : ''}
+                              className={props.menuId === m.id ? 'active' : ''}
                             >
                               <NavLink to={`/${m.link}/${s.link}`}>
                                 {s.title}

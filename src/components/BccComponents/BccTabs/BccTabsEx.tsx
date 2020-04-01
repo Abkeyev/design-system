@@ -1,13 +1,14 @@
 import React from 'react'
-import { BccTabs, BccTab } from '../../BccComponents'
+import BccTab from '@bit/bcc.components.bcc-tab'
+import BccTabs from '@bit/bcc.components.bcc-tabs'
+
 import { makeStyles, createStyles, Theme } from '@material-ui/core/styles'
-import theme from '../../../theme'
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
     tabs: {
-      padding: '8px 16px',
-      backgroundColor: theme.palette.grey[50],
+      padding: '8px 0',
+      fontSize: 16,
     },
   })
 )
@@ -23,18 +24,26 @@ const BccTabsEx = () => {
         onChange={(e: any, index: number) => setValue(index)}
         aria-label="simple tabs example"
       >
-        <BccTab label="Таб 1" />
-        <BccTab label="Таб 2" />
-        <BccTab label="Таб 3" />
+        <BccTab label="Частным лицам" />
+        <BccTab label="Бизнес клиентам" />
+        <BccTab label="P2P переводы" />
+        <BccTab label="Офисы" />
+        <BccTab label="Банкоматы" />
       </BccTabs>
       <div className={classes.tabs} hidden={value !== 0}>
-        Таб 1
+        Частным лицам
       </div>
       <div className={classes.tabs} hidden={value !== 1}>
-        Таб 2
+        Бизнес клиентам
       </div>
       <div className={classes.tabs} hidden={value !== 2}>
-        Таб 3
+        P2P переводы
+      </div>
+      <div className={classes.tabs} hidden={value !== 3}>
+        Офисы
+      </div>
+      <div className={classes.tabs} hidden={value !== 4}>
+        Банкоматы
       </div>
     </div>
   )

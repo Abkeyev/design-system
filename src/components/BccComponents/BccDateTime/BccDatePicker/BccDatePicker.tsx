@@ -1,19 +1,17 @@
 import { KeyboardDatePicker } from '@material-ui/pickers'
-import { withStyles } from '@material-ui/core/styles'
-import Tooltip from '@material-ui/core/Tooltip'
+import { withStyles, createMuiTheme } from '@material-ui/core/styles'
 import React from 'react'
-import theme from '../../../../theme'
 
 const BccDatePicker = withStyles({
   root: {
     '& .MuiOutlinedInput-notchedOutline': {
-      borderColor: theme.palette.grey[200],
+      borderColor: '#CCCFD1',
     },
     '& .MuiOutlinedInput-root:hover .MuiOutlinedInput-notchedOutline': {
-      borderColor: theme.palette.grey[400],
+      borderColor: '#80868C',
     },
     '& .MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline': {
-      borderColor: theme.palette.primary.main,
+      borderColor: '#27AE60',
       borderWidth: 1,
     },
   },

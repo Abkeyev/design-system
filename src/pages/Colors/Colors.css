@@ -17,3 +17,13 @@
       display: block;
       font-size: 12px;
       line-height: 14px; }
+
+.descTitle {
+  margin-bottom: 15px !important; }
+
+.wrapper {
+  margin-bottom: 30px; }
+  .wrapper > img {
+    width: 60%;
+    margin: 0 auto;
+    display: block; }

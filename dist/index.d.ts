@@ -1,1 +1,1 @@
-export { default as BccButton } from './BccButton/BccButton';
+export { default as BccSlider } from './BccSelect';

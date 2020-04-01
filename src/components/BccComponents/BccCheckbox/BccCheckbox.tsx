@@ -1,25 +1,28 @@
 import React from 'react'
 import Checkbox from '@material-ui/core/Checkbox'
 import { withStyles } from '@material-ui/core/styles'
-import theme from '../../../theme'
 
 const BccCheckbox = withStyles({
   root: {
-    color: theme.palette.grey[500],
+    color: '#4D565F',
+    // padding: 0,
     '&.Mui-disabled': {
       '&$checked': {
-        color: theme.palette.grey[400],
+        color: '#80868C',
       },
     },
     '&.Mui-checked': {
-      color: theme.palette.primary.main,
+      color: '#27AE60',
       '&:hover': {
         background: 'none',
       },
     },
+    '& .MuiSvgIcon-root': {
+      fontSize: 24,
+    },
     '&:hover': {
       background: 'none',
-      color: theme.palette.primary.main,
+      color: '#27AE60',
     },
   },
   checked: {},

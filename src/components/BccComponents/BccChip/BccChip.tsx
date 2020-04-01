@@ -1,58 +1,63 @@
 import React from 'react'
 import { withStyles } from '@material-ui/core/styles'
 import Chip from '@material-ui/core/Chip'
-import theme from '../../../theme'
 
 const BccChip = withStyles({
   root: {
-    backgroundColor: theme.palette.primary.main,
-    color: theme.palette.common.white,
-    fontSize: 11,
+    backgroundColor: '#27AE60',
+    color: 'white',
+    fontSize: 12,
     '& .MuiChip-icon, & .MuiChip-deleteIcon': {
-      color: theme.palette.common.white,
+      color: 'white',
     },
+  },
+  label: {
+    padding: '8px 24px',
   },
   clickable: {
     '&:hover': {
-      backgroundColor: theme.palette.primary.light,
+      backgroundColor: '#7DCEA0',
     },
     '&:focus, &:active': {
-      backgroundColor: theme.palette.primary.dark,
+      backgroundColor: '#1F7042',
     },
     '&.MuiChip-outlined': {
       '&:hover': {
-        borderColor: theme.palette.primary.light,
+        borderColor: '#7DCEA0',
         backgroundColor: 'white',
-        color: theme.palette.primary.light,
+        color: '#7DCEA0',
       },
       '&:focus, &:active': {
-        borderColor: theme.palette.primary.dark,
+        borderColor: '#1F7042',
         backgroundColor: 'white',
-        color: theme.palette.primary.dark,
+        color: '#1F7042',
       },
     },
   },
   sizeSmall: {
     fontSize: 10,
   },
+  labelSmall: {
+    padding: '4px 12px',
+  },
   deletable: {
     '&:focus': {
-      backgroundColor: theme.palette.primary.main,
+      backgroundColor: '#27AE60',
     },
     '&.MuiChip-outlined': {
       '&:focus, &:active': {
-        borderColor: theme.palette.primary.main,
+        borderColor: '#27AE60',
         backgroundColor: 'white',
-        color: theme.palette.primary.main,
+        color: '#27AE60',
       },
     },
   },
   outlined: {
     backgroundColor: 'white',
-    borderColor: theme.palette.primary.main,
-    color: theme.palette.primary.main,
+    borderColor: '#27AE60',
+    color: '#27AE60',
     '& .MuiChip-icon, & .MuiChip-deleteIcon': {
-      color: theme.palette.primary.main,
+      color: '#27AE60',
     },
   },
 })((props: any) => <Chip {...props} />)

@@ -1,15 +1,12 @@
 import React from 'react'
 import { makeStyles } from '@material-ui/core/styles'
-import {
-  BccTable,
-  BccTableCell,
-  BccTableBody,
-  BccTableContainer,
-  BccTableHead,
-  BccTableRow,
-  BccTypography,
-} from '../../BccComponents'
-import Paper from '@material-ui/core/Paper'
+
+import BccTable from '@bit/bcc.components.bcc-table'
+import BccTableCell from '@bit/bcc.components.bcc-table-cell'
+import BccTableBody from '@bit/bcc.components.bcc-table-body'
+import BccTableContainer from '@bit/bcc.components.bcc-table-container'
+import BccTableHead from '@bit/bcc.components.bcc-table-head'
+import BccTableRow from '@bit/bcc.components.bcc-table-row'
 
 const useStyles = makeStyles({
   table: {
@@ -39,14 +36,12 @@ export default function SimpleTable() {
   const classes = useStyles()
 
   return (
-    <BccTableContainer component={Paper}>
+    <BccTableContainer>
       <BccTable className={classes.table} aria-label="simple table">
         <BccTableHead>
           <BccTableRow>
             <BccTableCell>Dessert (100g serving)</BccTableCell>
-            <BccTableCell align="right">
-              <BccTypography type="p4">131121312asdasdasda</BccTypography>
-            </BccTableCell>
+            <BccTableCell align="right">Fat&nbsp;(g)</BccTableCell>
             <BccTableCell align="right">Fat&nbsp;(g)</BccTableCell>
             <BccTableCell align="right">Carbs&nbsp;(g)</BccTableCell>
             <BccTableCell align="right">Protein&nbsp;(g)</BccTableCell>

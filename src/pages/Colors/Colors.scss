@@ -22,3 +22,14 @@
     }
   }
 }
+.descTitle {
+  margin-bottom: 15px !important;
+}
+.wrapper {
+  margin-bottom: 30px;
+  & > img {
+    width: 60%;
+    margin: 0 auto;
+    display: block;
+  }
+}

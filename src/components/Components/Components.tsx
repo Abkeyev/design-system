@@ -28,31 +28,36 @@ import {
   BccSwitch,
   BccBreadcrumbs,
   BccTooltip,
-  BccBadge,
-  BccAlert,
-  BccToggleButton,
-  BccToggleButtonGroup,
   BccTabsEx,
+  BccLink,
   BccStepperEx,
   BccDialogEx,
   BccPopoverEx,
   BccSnackbarEx,
   BccTableEx,
+  BccSliderEx,
 } from '../BccComponents'
+
+import BccBadge from '@bit/bcc.components.bcc-badge'
+import BccAlert from '@bit/bcc.components.bcc-alert'
+import BccAlertTitle from '@bit/bcc.components.bcc-alert-title'
+import BccToggleButton from '@bit/bcc.components.bcc-toggle-button'
+import BccToggleButtonGroup from '@bit/bcc.components.bcc-toggle-button-group'
+
 import './Components.css'
-import {
-  Table,
-  TableBody,
-  TableCell,
-  TableContainer,
-  TableHead,
-  TableRow,
-} from '@material-ui/core'
+
+import BccTable from '@bit/bcc.components.bcc-table'
+import BccTableCell from '@bit/bcc.components.bcc-table-cell'
+import BccTableBody from '@bit/bcc.components.bcc-table-body'
+import BccTableContainer from '@bit/bcc.components.bcc-table-container'
+import BccTableHead from '@bit/bcc.components.bcc-table-head'
+import BccTableRow from '@bit/bcc.components.bcc-table-row'
 
 import DeleteIcon from '@material-ui/icons/Delete'
 import CloudUploadIcon from '@material-ui/icons/CloudUpload'
 import SaveIcon from '@material-ui/icons/Save'
 import SendIcon from '@material-ui/icons/Send'
+import CheckIcon from '@material-ui/icons/Check'
 import AlarmIcon from '@material-ui/icons/Alarm'
 import AddShoppingCartIcon from '@material-ui/icons/AddShoppingCart'
 import InputAdornment from '@material-ui/core/InputAdornment'
@@ -157,9 +162,7 @@ import BccTooltip from '@bit/bcc.component.bcc-tooltip';`,
       code: `<BccAvatarGroup>
   <BccAvatar alt="Remy Sharp" src="/man-ava.png" />
   <BccAvatar alt="Travis Howard" src="/woman-ava.png" />
-  <BccTooltip title="Foo • Bar • Baz">
-    <BccAvatar>+3</BccAvatar>
-  </BccTooltip>
+  <BccAvatar>+3</BccAvatar>
 </BccAvatarGroup>`,
     },
     {
@@ -1573,39 +1576,31 @@ import ExpandMoreIcon from '@material-ui/icons/ExpandMore';`,
         </>
       ),
       code: `<BccCollapsePanel>
-  <BccCollapseTitle
-    expandIcon={<ExpandMoreIcon />}
-  >
+  <BccCollapseTitle expandIcon={<ExpandMoreIcon />}>
     <BccTypography type="p2">Панель 1</BccTypography>
   </BccCollapseTitle>
   <BccCollapseDetails>
     <BccTypography type="p2">
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex,
-      sit amet blandit leo lobortis eget.
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+      Suspendisse malesuada lacus ex, sit amet blandit leo lobortis
+      eget.
     </BccTypography>
   </BccCollapseDetails>
 </BccCollapsePanel>
 <BccCollapsePanel>
-  <BccCollapseTitle
-    expandIcon={<ExpandMoreIcon />}
-    aria-controls="panel2a-content"
-    id="panel2a-header"
-  >
+  <BccCollapseTitle expandIcon={<ExpandMoreIcon />}>
     <BccTypography type="p2">Панель 2</BccTypography>
   </BccCollapseTitle>
   <BccCollapseDetails>
     <BccTypography type="p2">
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex,
-      sit amet blandit leo lobortis eget.
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+      Suspendisse malesuada lacus ex, sit amet blandit leo lobortis
+      eget.
     </BccTypography>
   </BccCollapseDetails>
 </BccCollapsePanel>
 <BccCollapsePanel disabled>
-  <BccCollapseTitle
-    expandIcon={<ExpandMoreIcon />}
-    aria-controls="panel3a-content"
-    id="panel3a-header"
-  >
+  <BccCollapseTitle expandIcon={<ExpandMoreIcon />}>
     <BccTypography type="p2">Не активная панель</BccTypography>
   </BccCollapseTitle>
 </BccCollapsePanel>`,
@@ -1631,24 +1626,22 @@ import ExpandMoreIcon from '@material-ui/icons/ExpandMore';`,
       title: 'Простые табы',
       desc:
         'Tabs позволяют легко исследовать и переключаться между различными представлениями.',
-      libs: `import BccCollapseTitle from '@bit/bcc.components.bcc-collapse-title';
-import BccCollapseDetails from '@bit/bcc.components.bcc-collapse-details';
-import ExpandMoreIcon from '@material-ui/icons/ExpandMore';`,
+      libs: ``,
       component: wrapComponents(
         <>
           <BccTabsEx />
         </>
       ),
       code: `import React from 'react'
-import { BccTabs, BccTab } from '../../BccComponents'
+import BccTab from '@bit/bcc.components.bcc-tab'
+import BccTabs from '@bit/bcc.components.bcc-tabs'
+
 import { makeStyles, createStyles, Theme } from '@material-ui/core/styles'
-import theme from '../../../theme'
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
     tabs: {
       padding: '8px 16px',
-      backgroundColor: theme.palette.grey[50],
     },
   })
 )
@@ -1664,18 +1657,26 @@ const BccTabsEx = () => {
         onChange={(e: any, index: number) => setValue(index)}
         aria-label="simple tabs example"
       >
-        <BccTab label="Таб 1" />
-        <BccTab label="Таб 2" />
-        <BccTab label="Таб 3" />
+        <BccTab label="Частным лицам" />
+        <BccTab label="Бизнес клиентам" />
+        <BccTab label="P2P переводы" />
+        <BccTab label="Офисы" />
+        <BccTab label="Банкоматы" />
       </BccTabs>
       <div className={classes.tabs} hidden={value !== 0}>
-        Таб 1
+        Частным лицам
       </div>
       <div className={classes.tabs} hidden={value !== 1}>
-        Таб 2
+        Бизнес клиентам
       </div>
       <div className={classes.tabs} hidden={value !== 2}>
-        Таб 3
+        P2P переводы
+      </div>
+      <div className={classes.tabs} hidden={value !== 3}>
+        Офисы
+      </div>
+      <div className={classes.tabs} hidden={value !== 4}>
+        Банкоматы
       </div>
     </div>
   )
@@ -1687,15 +1688,117 @@ export default BccTabsEx`,
   stepper: [
     {
       id: 12001,
-      title: 'Линейный',
+      title: 'Стандартный',
       desc: '',
-      libs: ``,
+      libs: '',
       component: wrapComponents(
         <>
           <BccStepperEx />
         </>
       ),
-      code: ``,
+      code: `import React from 'react'
+import { makeStyles, Theme, createStyles } from '@material-ui/core/styles'
+import BccStepLabel from '@bit/bcc.components.bcc-step-label'
+import BccStepper from '@bit/bcc.components.bcc-stepper'
+import BccStep from '@bit/bcc.components.bcc-step'
+import BccButton from '@bit/bcc.components.bcc-button'
+import BccTypography from '@bit/bcc.components.bcc-typography'
+
+const useStyles = makeStyles((theme: Theme) =>
+  createStyles({
+    root: {
+      width: '100%',
+    },
+    backButton: {
+      marginRight: theme.spacing(1),
+    },
+    instructions: {
+      marginTop: theme.spacing(1),
+      marginBottom: theme.spacing(1),
+    },
+  })
+)
+
+function getSteps() {
+  return ['Личные данные', 'Контакты', 'Печать']
+}
+
+function getStepContent(stepIndex: number) {
+  switch (stepIndex) {
+    case 0:
+      return 'Заполните личные данные'
+    case 1:
+      return 'Заполните контакты'
+    case 2:
+      return 'Распечатать'
+    default:
+      return 'Ошибка'
+  }
+}
+
+const BccStepperEx = () => {
+  const classes = useStyles()
+  const [activeStep, setActiveStep] = React.useState(0)
+  const steps = getSteps()
+
+  const handleNext = () => {
+    setActiveStep(prevActiveStep => prevActiveStep + 1)
+  }
+
+  const handleBack = () => {
+    setActiveStep(prevActiveStep => prevActiveStep - 1)
+  }
+
+  const handleReset = () => {
+    setActiveStep(0)
+  }
+
+  return (
+    <div className={classes.root}>
+      <BccStepper activeStep={activeStep}>
+        {steps.map(label => (
+          <BccStep key={label}>
+            <BccStepLabel>{label}</BccStepLabel>
+          </BccStep>
+        ))}
+      </BccStepper>
+      <div>
+        {activeStep === steps.length ? (
+          <div>
+            <BccTypography type="p3" className={classes.instructions}>
+              Все завершено!
+            </BccTypography>
+            <BccButton onClick={handleReset}>К началу</BccButton>
+          </div>
+        ) : (
+          <div>
+            <BccTypography type="p3" className={classes.instructions}>
+              {getStepContent(activeStep)}
+            </BccTypography>
+            <div>
+              <BccButton
+                disabled={activeStep === 0}
+                onClick={handleBack}
+                className={classes.backButton}
+              >
+                Назад
+              </BccButton>
+              <BccButton
+                variant="contained"
+                color="primary"
+                onClick={handleNext}
+              >
+                {activeStep === steps.length - 1 ? 'Завершить' : 'Далее'}
+              </BccButton>
+            </div>
+          </div>
+        )}
+      </div>
+    </div>
+  )
+}
+
+export default BccStepperEx`,
     },
   ],
   breadcrumbs: [
@@ -1706,14 +1809,14 @@ export default BccTabsEx`,
       libs: ``,
       component: wrapComponents(
         <>
-          <BccBreadcrumbs aria-label="breadcrumb">
+          <BccBreadcrumbs>
             <BccTypography type="p3">Главная</BccTypography>
             <BccTypography type="p3">Компоненты</BccTypography>
             <BccTypography type="p3">Хлебные крошки</BccTypography>
           </BccBreadcrumbs>
         </>
       ),
-      code: `<BccBreadcrumbs aria-label="breadcrumb">
+      code: `<BccBreadcrumbs>
   <BccTypography type="p3">Главная</BccTypography>
   <BccTypography type="p3">Компоненты</BccTypography>
   <BccTypography type="p3">Хлебные крошки</BccTypography>
@@ -1731,7 +1834,57 @@ export default BccTabsEx`,
           <BccDialogEx />
         </>
       ),
-      code: ``,
+      code: `import React from 'react'
+import BccDialog from '@bit/bcc.components.bcc-dialog'
+import BccDialogActions from '@bit/bcc.components.bcc-dialog-actions'
+import BccDialogTitle from '@bit/bcc.components.bcc-dialog-title'
+import BccDialogContent from '@bit/bcc.components.bcc-dialog-content'
+import BccButton from '@bit/bcc.components.bcc-button'
+import BccTypography from '@bit/bcc.components.bcc-typography'
+
+export default function CustomizedDialogs() {
+  const [open, setOpen] = React.useState(false)
+
+  const handleClickOpen = () => {
+    setOpen(true)
+  }
+  const handleClose = () => {
+    setOpen(false)
+  }
+
+  return (
+    <div>
+      <BccButton variant="outlined" onClick={handleClickOpen}>
+        Открыть
+      </BccButton>
+      <BccDialog
+        onClose={handleClose}
+        aria-labelledby="customized-dialog-title"
+        open={open}
+      >
+        <BccDialogTitle id="customized-dialog-title" onClose={handleClose}>
+          <BccTypography type="h5">Заголовок</BccTypography>
+        </BccDialogTitle>
+        <BccDialogContent dividers>
+          <BccTypography type="p1">
+            Сохранить введенные вами данные и перейти к следуюшему шагу?
+          </BccTypography>
+        </BccDialogContent>
+        <BccDialogActions>
+          <BccButton
+            autoFocus
+            onClick={handleClose}
+            variant="contained"
+            size="small"
+            color="primary"
+          >
+            Надпись
+          </BccButton>
+        </BccDialogActions>
+      </BccDialog>
+    </div>
+  )
+}`,
     },
   ],
   popover: [
@@ -1758,7 +1911,7 @@ export default BccTabsEx`,
         <>
           <BccInput
             id="input-with-icon-textfield"
-            label="Логин"
+            label="Имя и фамилия"
             variant="filled"
             InputProps={{
               endAdornment: (
@@ -1777,7 +1930,24 @@ export default BccTabsEx`,
           />
         </>
       ),
-      code: ``,
+      code: `<BccInput
+  label="Имя и фамилия"
+  variant="filled"
+  InputProps={{
+    endAdornment: (
+      <BccTooltip
+        title="Имя и фамилия латинскими буквами на лицевой стороне карты."
+        placement="bottom-end"
+        arrow
+        interactive
+      >
+        <InputAdornment position="end">
+          <InfoOutlinedIcon />
+        </InputAdornment>
+      </BccTooltip>
+    ),
+  }}
+/>`,
     },
   ],
   snackbar: [
@@ -1791,7 +1961,48 @@ export default BccTabsEx`,
           <BccSnackbarEx />
         </>
       ),
-      code: ``,
+      code: `import React from 'react'
+import BccButton from '@bit/bcc.components.bcc-button'
+import BccAlert from '@bit/bcc.components.bcc-alert'
+import BccSnackbar from '@bit/bcc.components.bcc-snackbar'
+
+export default function BccSnackbarEx() {
+  const [open, setOpen] = React.useState(false)
+
+  const handleClick = () => {
+    setOpen(true)
+  }
+
+  const handleClose = (
+    event: React.SyntheticEvent | React.MouseEvent,
+    reason?: string
+  ) => {
+    if (reason === 'clickaway') {
+      return
+    }
+
+    setOpen(false)
+  }
+
+  return (
+    <div>
+      <BccButton variant="text" color="primary" onClick={handleClick}>
+        Открыть Snackbar
+      </BccButton>
+      <BccSnackbar
+        anchorOrigin={{
+          vertical: 'bottom',
+          horizontal: 'right',
+        }}
+        open={open}
+        autoHideDuration={6000}
+        onClose={handleClose}
+      >
+        <BccAlert onClose={handleClose}>This is a success message!</BccAlert>
+      </BccSnackbar>
+    </div>
+  )
+}`,
     },
   ],
   badge: [
@@ -1832,7 +2043,161 @@ export default BccTabsEx`,
           </BccAlert>
         </>
       ),
-      code: ``,
+      code: `<BccAlert severity="error">
+  This is an error alert — check it out!
+</BccAlert>
+<BccAlert severity="warning">
+  This is a warning alert — check it out!
+</BccAlert>
+<BccAlert severity="info">
+  This is an info alert — check it out!
+</BccAlert>
+<BccAlert severity="success">
+  This is a success alert — check it out!
+</BccAlert>`,
+    },
+    {
+      id: 19002,
+      title: 'С заголовком',
+      desc: '',
+      libs: `import BccAlertTitle from '@bit/bcc.components.bcc-alert-title';`,
+      component: wrapComponents(
+        <>
+          <BccAlert severity="error">
+            <BccAlertTitle>Error</BccAlertTitle>
+            This is an error alert — check it out!
+          </BccAlert>
+          <BccAlert severity="warning">
+            <BccAlertTitle>Warning</BccAlertTitle>
+            This is a warning alert — check it out!
+          </BccAlert>
+          <BccAlert severity="info">
+            <BccAlertTitle>Info</BccAlertTitle>
+            This is an info alert — check it out!
+          </BccAlert>
+          <BccAlert severity="success">
+            <BccAlertTitle>Success</BccAlertTitle>
+            This is a success alert — check it out!
+          </BccAlert>
+        </>
+      ),
+      code: `<BccAlert severity="error">
+  <BccAlertTitle>Error</BccAlertTitle>
+  This is an error alert — check it out!
+</BccAlert>
+<BccAlert severity="warning">
+  <BccAlertTitle>Warning</BccAlertTitle>
+  This is a warning alert — check it out!
+</BccAlert>
+<BccAlert severity="info">
+  <BccAlertTitle>Info</BccAlertTitle>
+  This is an info alert — check it out!
+</BccAlert>
+<BccAlert severity="success">
+  <BccAlertTitle>Success</BccAlertTitle>
+  This is a success alert — check it out!
+</BccAlert>`,
+    },
+    {
+      id: 19003,
+      title: 'Действия',
+      desc: '',
+      libs: `import BccLink from '@bit/bcc.components.bcc-link'`,
+      component: wrapComponents(
+        <>
+          <BccAlert color="error" onClose={() => {}}>
+            This is a success alert — check it out!
+          </BccAlert>
+          <BccAlert action={<BccLink>Отмена</BccLink>}>
+            This is a success alert — check it out!
+          </BccAlert>
+        </>
+      ),
+      code: `<BccAlert onClose={() => {}}>
+  This is a success alert — check it out!
+</BccAlert>
+<BccAlert action={<BccLink>Отмена</BccLink>}>
+  This is a success alert — check it out!
+</BccAlert>`,
+    },
+    {
+      id: 19004,
+      title: 'Иконка',
+      desc: '',
+      libs: `import CheckIcon from '@material-ui/icons/Check';
+import MailIcon from '@material-ui/icons/Mail';`,
+      component: wrapComponents(
+        <>
+          <BccAlert icon={<CheckIcon />} onClose={() => {}}>
+            This is a success alert — check it out!
+          </BccAlert>
+          <BccAlert icon={<MailIcon />} onClose={() => {}}>
+            This is a success alert — check it out!
+          </BccAlert>
+        </>
+      ),
+      code: `<BccAlert icon={<CheckIcon />} onClose={() => {}}>
+  This is a success alert — check it out!
+</BccAlert>
+<BccAlert icon={<MailIcon />} onClose={() => {}}>
+  This is a success alert — check it out!
+</BccAlert>`,
+    },
+    {
+      id: 19005,
+      title: 'Контурный стиль',
+      desc: '',
+      libs: ``,
+      component: wrapComponents(
+        <>
+          <BccAlert severity="error" variant="outlined">
+            This is an error alert — check it out!
+          </BccAlert>
+          <BccAlert severity="warning" variant="outlined">
+            This is a warning alert — check it out!
+          </BccAlert>
+          <BccAlert severity="info" variant="outlined">
+            This is an info alert — check it out!
+          </BccAlert>
+          <BccAlert severity="success" variant="outlined">
+            This is a success alert — check it out!
+          </BccAlert>
+        </>
+      ),
+      code: `<BccAlert icon={<CheckIcon />} onClose={() => {}}>
+  This is a success alert — check it out!
+</BccAlert>
+<BccAlert icon={<MailIcon />} onClose={() => {}}>
+  This is a success alert — check it out!
+</BccAlert>`,
+    },
+    {
+      id: 19006,
+      title: 'Заполненный стиль',
+      desc: '',
+      libs: ``,
+      component: wrapComponents(
+        <>
+          <BccAlert severity="error" variant="filled">
+            This is an error alert — check it out!
+          </BccAlert>
+          <BccAlert severity="warning" variant="filled">
+            This is a warning alert — check it out!
+          </BccAlert>
+          <BccAlert severity="info" variant="filled">
+            This is an info alert — check it out!
+          </BccAlert>
+          <BccAlert severity="success" variant="filled">
+            This is a success alert — check it out!
+          </BccAlert>
+        </>
+      ),
+      code: `<BccAlert icon={<CheckIcon />} onClose={() => {}}>
+  This is a success alert — check it out!
+</BccAlert>
+<BccAlert icon={<MailIcon />} onClose={() => {}}>
+  This is a success alert — check it out!
+</BccAlert>`,
     },
   ],
   table: [
@@ -1846,7 +2211,72 @@ export default BccTabsEx`,
           <BccTableEx />
         </>
       ),
-      code: ``,
+      code: `import React from 'react'
+import { makeStyles } from '@material-ui/core/styles'
+
+import BccTable from '@bit/bcc.components.bcc-table'
+import BccTableCell from '@bit/bcc.components.bcc-table-cell'
+import BccTableBody from '@bit/bcc.components.bcc-table-body'
+import BccTableContainer from '@bit/bcc.components.bcc-table-container'
+import BccTableHead from '@bit/bcc.components.bcc-table-head'
+import BccTableRow from '@bit/bcc.components.bcc-table-row'
+
+const useStyles = makeStyles({
+  table: {
+    minWidth: 650,
+  },
+})
+
+function createData(
+  name: string,
+  calories: number,
+  fat: number,
+  carbs: number,
+  protein: number
+) {
+  return { name, calories, fat, carbs, protein }
+}
+
+const rows = [
+  createData('Frozen yoghurt', 159, 6.0, 24, 4.0),
+  createData('Ice cream sandwich', 237, 9.0, 37, 4.3),
+  createData('Eclair', 262, 16.0, 24, 6.0),
+  createData('Cupcake', 305, 3.7, 67, 4.3),
+  createData('Gingerbread', 356, 16.0, 49, 3.9),
+]
+
+export default function SimpleTable() {
+  const classes = useStyles()
+
+  return (
+    <BccTableContainer>
+      <BccTable className={classes.table} aria-label="simple table">
+        <BccTableHead>
+          <BccTableRow>
+            <BccTableCell>Dessert (100g serving)</BccTableCell>
+            <BccTableCell align="right">Fat&nbsp;(g)</BccTableCell>
+            <BccTableCell align="right">Fat&nbsp;(g)</BccTableCell>
+            <BccTableCell align="right">Carbs&nbsp;(g)</BccTableCell>
+            <BccTableCell align="right">Protein&nbsp;(g)</BccTableCell>
+          </BccTableRow>
+        </BccTableHead>
+        <BccTableBody>
+          {rows.map(row => (
+            <BccTableRow key={row.name}>
+              <BccTableCell component="th" scope="row">
+                {row.name}
+              </BccTableCell>
+              <BccTableCell align="right">{row.calories}</BccTableCell>
+              <BccTableCell align="right">{row.fat}</BccTableCell>
+              <BccTableCell align="right">{row.carbs}</BccTableCell>
+              <BccTableCell align="right">{row.protein}</BccTableCell>
+            </BccTableRow>
+          ))}
+        </BccTableBody>
+      </BccTable>
+    </BccTableContainer>
+  )
+}`,
     },
   ],
   toggle: [
@@ -1867,13 +2297,110 @@ export default BccTabsEx`,
           </BccToggleButtonGroup>
         </>
       ),
-      code: ``,
+      code: `<BccToggleButtonGroup>
+  <BccToggleButton value="left" selected>
+    <BccTypography type="p4">Мужской</BccTypography>
+  </BccToggleButton>
+  <BccToggleButton value="center">
+    <BccTypography type="p4">Женский</BccTypography>
+  </BccToggleButton>
+</BccToggleButtonGroup>`,
+    },
+  ],
+  slider: [
+    {
+      id: 21001,
+      title: 'Стандартный',
+      desc: '',
+      libs: ``,
+      component: wrapComponents(
+        <>
+          <BccSliderEx />
+        </>
+      ),
+      code: `import React from 'react'
+import BccInput from '@bit/bcc.components.bcc-input'
+import { BccSlider } from '../../BccComponents'
+import { createStyles, Theme, makeStyles } from '@material-ui/core/styles'
+
+const useStyles = makeStyles((theme: Theme) =>
+  createStyles({
+    wrap: {
+      display: 'grid',
+      gridGap: 10,
+    },
+    bccSlider: {
+      position: 'relative',
+    },
+    slider: {
+      position: 'absolute',
+      left: 6,
+      right: 6,
+      padding: 0,
+      bottom: -1,
+      width: 'calc(100% - 12px)',
+    },
+  })
+)
+
+const BccSliderEx = (props: any) => {
+  const [sum, setSum] = React.useState(0)
+  const [period, setPeriod] = React.useState(0)
+  const classes = useStyles()
+  return (
+    <div className={classes.wrap}>
+      <div className={classes.bccSlider}>
+        <BccInput
+          label="Выберите сумму"
+          InputLabelProps={{
+            shrink: true,
+          }}
+          value={sum + ' ₸'}
+          variant="filled"
+        />
+        <BccSlider
+          className={classes.slider}
+          min={0}
+          max={1000000}
+          step={50000}
+          valueLabelDisplay="off"
+          defaultValue={sum}
+          onChange={(e: any, val: any) =>
+            setSum(val instanceof Array ? val[1] : val)
+          }
+        />
+      </div>
+      <div className={classes.bccSlider}>
+        <BccInput
+          label="Выберите срок"
+          InputLabelProps={{
+            shrink: true,
+          }}
+          value={period + ' год'}
+          variant="filled"
+        />
+        <BccSlider
+          marks
+          className={classes.slider}
+          min={0}
+          max={6}
+          step={1}
+          onChange={(e: any, val: any) =>
+            setPeriod(val instanceof Array ? val[1] : val)
+          }
+        />
+      </div>
+    </div>
+  )
+}
+
+export default BccSliderEx`,
     },
   ],
 }
 
 function wrapComponents(component: any) {
-  return <div className="elements">{component}</div>
+  return <div className="elements ">{component}</div>
 }
 
 function getComponents(name: string) {
@@ -1919,12 +2446,15 @@ function getComponents(name: string) {
     return allComponents.table
   } else if (name === 'toggle') {
     return allComponents.toggle
+  } else if (name === 'slider') {
+    return allComponents.slider
   }
 }
 
 export const Components = (props: any) => {
   const item = props.item
   let components = getComponents(item.link)
+  console.log(item)
   let install = item.install.join('\n')
   return (
     <>
@@ -1990,53 +2520,53 @@ export const Components = (props: any) => {
       <BccTypography block type="h4" className="installTitle">
         Props
       </BccTypography>
-      <TableContainer>
-        <Table aria-label="simple table">
-          <TableHead>
-            <TableRow>
-              <TableCell>
+      <BccTableContainer>
+        <BccTable aria-label="simple table">
+          <BccTableHead>
+            <BccTableRow>
+              <BccTableCell>
                 <BccTypography type="p3" weight="medium">
                   Название
                 </BccTypography>
-              </TableCell>
-              <TableCell align="right">
+              </BccTableCell>
+              <BccTableCell align="right">
                 <BccTypography type="p3" weight="medium">
                   Тип
                 </BccTypography>
-              </TableCell>
-              <TableCell align="right">
+              </BccTableCell>
+              <BccTableCell align="right">
                 <BccTypography type="p3" weight="medium">
                   По умолчанию
                 </BccTypography>
-              </TableCell>
-              <TableCell align="right">
+              </BccTableCell>
+              <BccTableCell align="right">
                 <BccTypography type="p3" weight="medium">
                   Описание
                 </BccTypography>
-              </TableCell>
-            </TableRow>
-          </TableHead>
-          <TableBody>
+              </BccTableCell>
+            </BccTableRow>
+          </BccTableHead>
+          <BccTableBody>
             {item.props &&
               item.props.map((row: any) => (
-                <TableRow key={row.id}>
-                  <TableCell component="th" scope="row">
+                <BccTableRow key={row.id}>
+                  <BccTableCell component="th" scope="row">
                     <BccTypography type="p4">{row.name}</BccTypography>
-                  </TableCell>
-                  <TableCell align="right">
+                  </BccTableCell>
+                  <BccTableCell align="right">
                     <BccTypography type="p4">{row.type}</BccTypography>
-                  </TableCell>
-                  <TableCell align="right">
+                  </BccTableCell>
+                  <BccTableCell align="right">
                     <BccTypography type="p4">{row.default}</BccTypography>
-                  </TableCell>
-                  <TableCell align="right">
+                  </BccTableCell>
+                  <BccTableCell align="right">
                     <BccTypography type="p4">{row.desc}</BccTypography>
-                  </TableCell>
-                </TableRow>
+                  </BccTableCell>
+                </BccTableRow>
               ))}
-          </TableBody>
-        </Table>
-      </TableContainer>
+          </BccTableBody>
+        </BccTable>
+      </BccTableContainer>
     </>
   )
 }

@@ -1,11 +1,14 @@
 import InputLabel from '@material-ui/core/InputLabel'
 import { withStyles } from '@material-ui/core/styles'
-import theme from '../../../../theme'
 
 const BccInputLabel = withStyles({
   root: {
-    color: theme.palette.grey[500],
+    color: '#4D565F',
     padding: '0 20px',
+    fontSize: '16px',
+    '& .MuiInputLabel-filled': {
+      fontSize: 13,
+    },
     '&.Mui-focused': {
       paddingTop: 10,
     },

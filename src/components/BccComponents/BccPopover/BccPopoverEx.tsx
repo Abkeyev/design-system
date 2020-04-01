@@ -1,6 +1,7 @@
 import React from 'react'
-import { BccPopover, BccTypography } from '../../BccComponents'
-import Typography from '@material-ui/core/Typography'
+import { BccPopover } from '../../BccComponents'
+import BccTypography from '@bit/bcc.components.bcc-typography'
+import BccButton from '@bit/bcc.components.bcc-button'
 import { makeStyles, createStyles, Theme } from '@material-ui/core/styles'
 
 const useStyles = makeStyles((theme: Theme) =>
@@ -14,28 +15,22 @@ const useStyles = makeStyles((theme: Theme) =>
 
 export default function MouseOverPopover() {
   const classes = useStyles()
-  const [anchorEl, setAnchorEl] = React.useState<HTMLElement | null>(null)
+  const [anchorEl, setAnchorEl] = React.useState<HTMLButtonElement | null>(null)
 
-  const handlePopoverOpen = (
-    event: React.MouseEvent<HTMLElement, MouseEvent>
-  ) => {
+  const handleClick = (event: React.MouseEvent<HTMLButtonElement>) => {
     setAnchorEl(event.currentTarget)
   }
 
-  const handlePopoverClose = () => {
+  const handleClose = () => {
     setAnchorEl(null)
   }
 
   const open = Boolean(anchorEl)
+  const id = open ? 'simple-popover' : undefined
 
   return (
     <div>
-      <Typography
-        onMouseEnter={handlePopoverOpen}
-        onMouseLeave={handlePopoverClose}
-      >
-        Hover with a Popover.
-      </Typography>
+      <BccButton onClick={handleClick}>Кнопка</BccButton>
       <BccPopover
         className={classes.popover}
         open={open}
@@ -48,7 +43,7 @@ export default function MouseOverPopover() {
           vertical: 'top',
           horizontal: 'left',
         }}
-        onClose={handlePopoverClose}
+        onClose={handleClose}
         disableRestoreFocus
       >
         <BccTypography type="p4">I use Popover.</BccTypography>

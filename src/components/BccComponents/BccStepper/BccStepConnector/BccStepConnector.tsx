@@ -1,12 +1,12 @@
+import React from 'react'
 import StepConnector from '@material-ui/core/StepConnector'
 import { withStyles } from '@material-ui/core/styles'
-import theme from '../../../../theme'
 
 const BccStepConnector = withStyles({
   root: {},
   line: {
     border: '2px solid',
-    borderColor: theme.palette.grey[100],
+    borderColor: '#E6E7E8',
   },
   alternativeLabel: {
     top: 7,
@@ -15,9 +15,9 @@ const BccStepConnector = withStyles({
   },
   completed: {
     '& .MuiStepConnector-line': {
-      borderColor: theme.palette.primary.main,
+      borderColor: '#27AE60',
     },
   },
-})(StepConnector)
+})((props: any) => <StepConnector {...props} />)
 
 export default BccStepConnector

@@ -12,7 +12,12 @@ import { Home } from './pages/Home'
 import { Colors, Usage, Grid, Typography } from './pages'
 import { MuiThemeProvider } from '@material-ui/core/styles'
 import theme from './theme'
-import { BccButton, BccTypography } from './components/BccComponents'
+import {
+  BccButton,
+  BccTypography,
+  BccBreadcrumbs,
+  BccChip,
+} from './components/BccComponents'
 
 const App = () => {
   let i = localStorage.getItem('item')
@@ -43,24 +48,28 @@ const App = () => {
               window.location.pathname !== '/' && (
                 <>
                   <BccTypography block type="p4" className="breadcrumbs">
-                    <NavLink
-                      onClick={() => {
-                        setItem('')
-                        setParent('')
-                      }}
-                      to="/"
-                    >
-                      BCC Design System
-                    </NavLink>{' '}
-                    > {parent.title} >{' '}
-                    <BccTypography type="p4" className="last-crumb">
-                      {item.title}
-                    </BccTypography>
+                    <BccBreadcrumbs>
+                      <NavLink
+                        onClick={() => {
+                          setItem('')
+                          setParent('')
+                        }}
+                        to="/"
+                      >
+                        BCC Design System
+                      </NavLink>
+                      <BccTypography type="p4" className="last-crumb">
+                        {parent.title}
+                      </BccTypography>
+                      <BccTypography type="p4" className="last-crumb">
+                        {item.title}
+                      </BccTypography>
+                    </BccBreadcrumbs>
                   </BccTypography>
                   <BccTypography type="h3" weight="normal" className="title">
                     {item.title}{' '}
                     {item.version && (
-                      <span className="version">v{item.version}</span>
+                      <BccChip size="small" label={`v${item.version}`} />
                     )}
                   </BccTypography>
                 </>

@@ -1,10 +1,9 @@
 import React from 'react'
-import Button from '@material-ui/core/Button'
-import { BccSnackbar, BccButton, BccAlert } from '../../BccComponents'
-import IconButton from '@material-ui/core/IconButton'
-import CloseIcon from '@material-ui/icons/Close'
+import BccButton from '@bit/bcc.components.bcc-button'
+import BccAlert from '@bit/bcc.components.bcc-alert'
+import BccSnackbar from '@bit/bcc.components.bcc-snackbar'
 
-export default function SimpleSnackbar() {
+export default function BccSnackbarEx() {
   const [open, setOpen] = React.useState(false)
 
   const handleClick = () => {
@@ -36,9 +35,7 @@ export default function SimpleSnackbar() {
         autoHideDuration={6000}
         onClose={handleClose}
       >
-        <BccAlert onClose={handleClose} severity="success">
-          This is a success message!
-        </BccAlert>
+        <BccAlert onClose={handleClose}>This is a success message!</BccAlert>
       </BccSnackbar>
     </div>
   )

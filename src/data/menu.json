@@ -38,7 +38,29 @@
         "link": "avatar",
         "install": ["npm install @bit/bcc.components.bcc-avatar"],
         "version": "1.0.0",
-        "props": []
+        "props": [
+          {
+            "id": 21002,
+            "name": "className",
+            "type": "object",
+            "default": "",
+            "desc": "Переопределить или расширить стили, примененные к компоненту."
+          },
+          {
+            "id": 21003,
+            "name": "src",
+            "type": "string",
+            "default": "",
+            "desc": "Атрибут src для элемента img."
+          },
+          {
+            "id": 21004,
+            "name": "variant",
+            "type": "'circle' | 'rounded' | 'square'",
+            "default": "'circle'",
+            "desc": "Форма аватара."
+          }
+        ]
       },
       {
         "id": 22,
@@ -49,21 +71,21 @@
         "version": "1.0.0",
         "props": [
           {
-            "id": 20002,
+            "id": 22002,
             "name": "className",
             "type": "object",
             "default": "",
             "desc": "Переопределить или расширить стили, примененные к компоненту."
           },
           {
-            "id": 20003,
+            "id": 22003,
             "name": "color",
             "type": "primary | secondary",
             "default": "default",
             "desc": "Цвета компонента."
           },
           {
-            "id": 20004,
+            "id": 22004,
             "name": "disabled",
             "type": "bool",
             "default": "false",
@@ -121,6 +143,13 @@
         "install": ["npm install @bit/bcc.components.bcc-input"],
         "version": "1.0.0",
         "props": [
+          {
+            "id": 30000,
+            "name": "className",
+            "type": "object",
+            "default": "",
+            "desc": "Переопределить или расширить стили, примененные к компоненту."
+          },
           {
             "id": 30001,
             "name": "autoFocus",
@@ -279,6 +308,13 @@
         "version": "1.0.0",
         "props": [
           {
+            "id": 40000,
+            "name": "className",
+            "type": "object",
+            "default": "",
+            "desc": "Переопределить или расширить стили, примененные к компоненту."
+          },
+          {
             "id": 40001,
             "name": "checked",
             "type": "bool",
@@ -373,6 +409,13 @@
         "version": "1.0.0",
         "props": [
           {
+            "id": 100000,
+            "name": "className",
+            "type": "object",
+            "default": "",
+            "desc": "Переопределить или расширить стили, примененные к компоненту."
+          },
+          {
             "id": 100001,
             "name": "avatar",
             "type": "element",
@@ -452,6 +495,13 @@
         "install": ["npm install @bit/bcc.components.bcc-radio"],
         "version": "1.0.0",
         "props": [
+          {
+            "id": 50000,
+            "name": "className",
+            "type": "object",
+            "default": "",
+            "desc": "Переопределить или расширить стили, примененные к компоненту."
+          },
           {
             "id": 50001,
             "name": "checked",
@@ -543,7 +593,15 @@
           "npm install @bit/bcc.components.bcc-datetime-picker"
         ],
         "version": "1.0.0",
-        "props": []
+        "props": [
+          {
+            "id": 27000,
+            "name": "className",
+            "type": "object",
+            "default": "",
+            "desc": "Переопределить или расширить стили, примененные к компоненту."
+          }
+        ]
       },
       {
         "id": 28,
@@ -552,7 +610,64 @@
         "link": "select",
         "install": ["npm install @bit/bcc.components.bcc-select"],
         "version": "1.0.0",
-        "props": []
+        "props": [
+          {
+            "id": 28001,
+            "name": "className",
+            "type": "object",
+            "default": "",
+            "desc": "Переопределить или расширить стили, примененные к компоненту."
+          },
+          {
+            "id": 28002,
+            "name": "defaultInputValue",
+            "type": "string",
+            "default": "",
+            "desc": "Значение по умолчанию для элемента input"
+          },
+          {
+            "id": 28003,
+            "name": "defaultMenuIsOpen",
+            "type": "boolean",
+            "default": "false",
+            "desc": "Если true меню будет открыто, по умолчанию меню закрыто false."
+          },
+          {
+            "id": 28004,
+            "name": "defaultValue",
+            "type": "object",
+            "default": "",
+            "desc": "Зачение по умолчанию."
+          },
+          {
+            "id": 28005,
+            "name": "inputValue",
+            "type": "object",
+            "default": "",
+            "desc": "Зачение для input."
+          },
+          {
+            "id": 28006,
+            "name": "menuIsOpen",
+            "type": "boolean",
+            "default": "",
+            "desc": "Если true меню будет открыто, по умолчанию меню закрыто false."
+          },
+          {
+            "id": 28008,
+            "name": "value",
+            "type": "object",
+            "default": "",
+            "desc": "Зачение."
+          },
+          {
+            "id": 28009,
+            "name": "onChange",
+            "type": "func",
+            "default": "",
+            "desc": "Функция обратного вызова, срабатывает при изменении значения."
+          }
+        ]
       },
       {
         "id": 29,
@@ -561,7 +676,64 @@
         "link": "slider",
         "install": ["npm install @bit/bcc.components.bcc-slider"],
         "version": "1.0.0",
-        "props": []
+        "props": [
+          {
+            "id": 290001,
+            "name": "className",
+            "type": "object",
+            "default": "false",
+            "desc": "Переопределить или расширить стили, примененные к компоненту."
+          },
+          {
+            "id": 290002,
+            "name": "defaultValue",
+            "type": "number",
+            "default": "",
+            "desc": "Значение элемента по умолчанию."
+          },
+          {
+            "id": 290003,
+            "name": "disabled",
+            "type": "boolean",
+            "default": "false",
+            "desc": "Если это true, slider будет отключен."
+          },
+          {
+            "id": 290004,
+            "name": "marks",
+            "type": "boolean | array",
+            "default": "false",
+            "desc": "Метки указывают заранее определенные значения, на которые пользователь может переместить ползунок. Если true, отметки будут разнесены в соответствии со значением шага опоры. Если это массив, он должен содержать объекты со значением и необязательные метки ключей."
+          },
+          {
+            "id": 290005,
+            "name": "max",
+            "type": "number",
+            "default": "100",
+            "desc": "Максимально допустимое значение слайдера. Не должно быть равно min"
+          },
+          {
+            "id": 290006,
+            "name": "min",
+            "type": "number",
+            "default": "0",
+            "desc": "Минимально допустимое значение слайдера. Не должно быть равно max."
+          },
+          {
+            "id": 290007,
+            "name": "onChange",
+            "type": "func",
+            "default": "",
+            "desc": "Callback срабатывает при изменении состояния."
+          },
+          {
+            "id": 290008,
+            "name": "step",
+            "type": "number",
+            "default": "1",
+            "desc": "Шаг с которой ползунок может перебирать значения. Рекомендуется чтобы max и min равномерно могли делиться на шаг."
+          }
+        ]
       },
       {
         "id": 210,
@@ -570,7 +742,50 @@
         "link": "switch",
         "install": ["npm install @bit/bcc.components.bcc-switch"],
         "version": "1.0.0",
-        "props": []
+        "props": [
+          {
+            "id": 210000,
+            "name": "className",
+            "type": "object",
+            "default": "",
+            "desc": "Переопределить или расширить стили, примененные к компоненту."
+          },
+          {
+            "id": 210001,
+            "name": "checked",
+            "type": "boolean",
+            "default": "false",
+            "desc": "Если true копонент будет выбран, по умолчанию не выбран."
+          },
+          {
+            "id": 210002,
+            "name": "disabled",
+            "type": "boolean",
+            "default": "",
+            "desc": "Если это true, switch будет отключен."
+          },
+          {
+            "id": 210003,
+            "name": "onChange",
+            "type": "func",
+            "default": "",
+            "desc": "Callback срабатывает при изменении состояния."
+          },
+          {
+            "id": 210004,
+            "name": "required",
+            "type": "boolean",
+            "default": "",
+            "desc": "Если true, элемент input будет обязательным."
+          },
+          {
+            "id": 210005,
+            "name": "size",
+            "type": "'small' | medium",
+            "default": "'medium'",
+            "desc": "Размер переключателя."
+          }
+        ]
       },
       {
         "id": 211,
@@ -583,7 +798,43 @@
           "npm install @bit/bcc.components.bcc-collapse-details"
         ],
         "version": "1.0.0",
-        "props": []
+        "props": [
+          {
+            "id": 2110000,
+            "name": "className",
+            "type": "object",
+            "default": "",
+            "desc": "Переопределить или расширить стили, примененные к компоненту."
+          },
+          {
+            "id": 2110001,
+            "name": "defaultExpanded",
+            "type": "boolean",
+            "default": "false",
+            "desc": "Если true, панель открыта по умолчанию."
+          },
+          {
+            "id": 2110002,
+            "name": "disabled",
+            "type": "node",
+            "default": "false",
+            "desc": "Если true, панель будет отображаться в отключенном состоянии"
+          },
+          {
+            "id": 2110003,
+            "name": "onChange",
+            "type": "func",
+            "default": "",
+            "desc": "Callback срабатывает при изменении значения."
+          },
+          {
+            "id": 2110004,
+            "name": "expandIcon(BccCollapseTitle)",
+            "type": "node",
+            "default": "false",
+            "desc": "Значок для отображения в качестве индикатора расширения."
+          }
+        ]
       },
       {
         "id": 212,
@@ -595,7 +846,36 @@
           "npm install @bit/bcc.components.bcc-tabs"
         ],
         "version": "1.0.0",
-        "props": []
+        "props": [
+          {
+            "id": 290000,
+            "name": "className",
+            "type": "object",
+            "default": "false",
+            "desc": "Переопределить или расширить стили, примененные к компоненту."
+          },
+          {
+            "id": 212001,
+            "name": "disabled",
+            "type": "boolean",
+            "default": "false",
+            "desc": "Если это true, tab будет отключен."
+          },
+          {
+            "id": 212002,
+            "name": "label(BccTab)",
+            "type": "node",
+            "default": "false",
+            "desc": "Текст tab'а."
+          },
+          {
+            "id": 212003,
+            "name": "onChange",
+            "type": "func",
+            "default": "",
+            "desc": "Callback срабатывает при изменении значения."
+          }
+        ]
       },
       {
         "id": 213,
@@ -608,7 +888,36 @@
           "npm install @bit/bcc.components.bcc-step-label"
         ],
         "version": "1.0.0",
-        "props": []
+        "props": [
+          {
+            "id": 213001,
+            "name": "className",
+            "type": "object",
+            "default": "",
+            "desc": "Переопределить или расширить стили, примененные к компоненту."
+          },
+          {
+            "id": 213002,
+            "name": "activeStep",
+            "type": "number",
+            "default": "0",
+            "desc": "Определяет активный шаг, по умолчанию 0. Установите -1, чтобы отключить все шаги."
+          },
+          {
+            "id": 213003,
+            "name": "alternativeLabel",
+            "type": "bool",
+            "default": "true",
+            "desc": "По умолчанию текст шага расположен под иконкой, изменив на false текст и иконка будут расположены горизонтально."
+          },
+          {
+            "id": 213003,
+            "name": "connector",
+            "type": "element",
+            "default": "<BccStepConnector />",
+            "desc": "Элемент, который расположен между каждым шагом."
+          }
+        ]
       },
       {
         "id": 223,
@@ -617,7 +926,15 @@
         "link": "breadcrumbs",
         "install": ["npm install @bit/bcc.components.bcc-breadcrumbs"],
         "version": "1.0.0",
-        "props": []
+        "props": [
+          {
+            "id": 22300,
+            "name": "className",
+            "type": "object",
+            "default": "",
+            "desc": "Переопределить или расширить стили, примененные к компоненту."
+          }
+        ]
       },
       {
         "id": 233,
@@ -631,16 +948,57 @@
           "npm install @bit/bcc.components.bcc-actions"
         ],
         "version": "1.0.0",
-        "props": []
-      },
-      {
-        "id": 243,
-        "title": "Popover",
-        "desc": "Popover может использоваться для отображения некоторого контента поверх другого.",
-        "link": "popover",
-        "install": ["npm install @bit/bcc.components.bcc-popover"],
-        "version": "1.0.0",
-        "props": []
+        "props": [
+          {
+            "id": 23300,
+            "name": "className",
+            "type": "object",
+            "default": "",
+            "desc": "Переопределить или расширить стили, примененные к компоненту."
+          },
+          {
+            "id": 23301,
+            "name": "disableBackdropClick",
+            "type": "boolean",
+            "default": "false",
+            "desc": "Если значение равно true, нажатие на фон не вызовет обратный вызов onClose."
+          },
+          {
+            "id": 23302,
+            "name": "fullScreen",
+            "type": "boolean",
+            "default": "false",
+            "desc": "Если true, диалог будет на весь экран."
+          },
+          {
+            "id": 23303,
+            "name": "fullWidth",
+            "type": "boolean",
+            "default": "false",
+            "desc": "Если true, то ширина диалога будет растянут на значение maxWidth."
+          },
+          {
+            "id": 23304,
+            "name": "onBackdropClick",
+            "type": "func",
+            "default": "false",
+            "desc": "Обратный вызов срабатывает при нажатии на фон."
+          },
+          {
+            "id": 23305,
+            "name": "onClose",
+            "type": "func",
+            "default": "false",
+            "desc": "Обратный вызов срабатывает, когда компонент вызывает закрытие."
+          },
+          {
+            "id": 23306,
+            "name": "open",
+            "type": "boolean",
+            "default": "",
+            "desc": "Если true, диалог открыт."
+          }
+        ]
       },
       {
         "id": 253,
@@ -649,7 +1007,43 @@
         "link": "tooltip",
         "install": ["npm install @bit/bcc.components.bcc-tooltip"],
         "version": "1.0.0",
-        "props": []
+        "props": [
+          {
+            "id": 25300,
+            "name": "title*",
+            "type": "string",
+            "default": "",
+            "desc": "Текст всплывающей подсказки. Строка заголовков нулевой длины никогда не отобразится."
+          },
+          {
+            "id": 25300,
+            "name": "className",
+            "type": "object",
+            "default": "",
+            "desc": "Переопределить или расширить стили, примененные к компоненту."
+          },
+          {
+            "id": 25301,
+            "name": "arrow",
+            "type": "boolean",
+            "default": "false",
+            "desc": "Если true, добавляет стрелку к подсказке."
+          },
+          {
+            "id": 25302,
+            "name": "open",
+            "type": "boolean",
+            "default": "false",
+            "desc": "Если true, всплывающая подсказка отображается."
+          },
+          {
+            "id": 25303,
+            "name": "placement",
+            "type": "'bottom-end' | 'bottom-start' | 'bottom' | 'left-end' | 'left-start' | 'left' | 'right-end' | 'right-start' | 'right' | 'top-end' | 'top-start' | 'top'",
+            "default": "'bottom'",
+            "desc": "Размещение всплывающей подсказки."
+          }
+        ]
       },
       {
         "id": 263,
@@ -658,7 +1052,29 @@
         "link": "snackbar",
         "install": ["npm install @bit/bcc.components.bcc-snackbar"],
         "version": "1.0.0",
-        "props": []
+        "props": [
+          {
+            "id": 26300,
+            "name": "className",
+            "type": "object",
+            "default": "",
+            "desc": "Переопределить или расширить стили, примененные к компоненту."
+          },
+          {
+            "id": 25300,
+            "name": "anchorOrigin",
+            "type": "{ horizontal: 'center' | 'left' | 'right', vertical: 'bottom' | 'top' }",
+            "default": "{ vertical: 'bottom', horizontal: 'center' }",
+            "desc": "Якорь Snackbar'a."
+          },
+          {
+            "id": 25300,
+            "name": "open",
+            "type": "boolean",
+            "default": "",
+            "desc": "Если это правда, Snackbar открыт."
+          }
+        ]
       },
       {
         "id": 273,
@@ -676,14 +1092,64 @@
         "link": "alert",
         "install": ["npm install @bit/bcc.components.bcc-alert"],
         "version": "1.0.0",
-        "props": []
+        "props": [
+          {
+            "id": 28101,
+            "name": "action",
+            "type": "node",
+            "default": "",
+            "desc": "Действие для отображения. Отображается после сообщения, в конце оповещения."
+          },
+          {
+            "id": 28102,
+            "name": "color",
+            "type": "'error' | 'info' | 'success' | 'warning'",
+            "default": "",
+            "desc": "Основной цвет для оповещения. Если не указано иное, значение берется из severity."
+          },
+          {
+            "id": 28103,
+            "name": "icon",
+            "type": "node",
+            "default": "",
+            "desc": "Переопределние иконки, отображаемый перед children. Если не указано иное, значок сопоставляется со значения severity."
+          },
+          {
+            "id": 28103,
+            "name": "onClose",
+            "type": "func",
+            "default": "",
+            "desc": "Функция которая запускает обратный вызов при нажатии, если отображается кнопка со значком закрытия."
+          },
+          {
+            "id": 28103,
+            "name": "severity",
+            "type": "'error' | 'info' | 'success' | 'warning'",
+            "default": "'success'",
+            "desc": "Severity оповещения определяет используемый цвет и значок."
+          },
+          {
+            "id": 28103,
+            "name": "variant",
+            "type": "'filled' | 'outlined' | 'standard'",
+            "default": "'standard'",
+            "desc": "Вариант для использования."
+          }
+        ]
       },
       {
         "id": 293,
         "title": "Table",
         "desc": "Таблицы отображают наборы данных. Они могут быть полностью модифицированы.",
         "link": "table",
-        "install": ["npm install @bit/bcc.components.bcc-table"],
+        "install": [
+          "npm install @bit/bcc.components.bcc-table",
+          "npm install @bit/bcc.components.bcc-table-cell",
+          "npm install @bit/bcc.components.bcc-table-body",
+          "npm install @bit/bcc.components.bcc-table-container",
+          "npm install @bit/bcc.components.bcc-table-head",
+          "npm install @bit/bcc.components.bcc-table-row"
+        ],
         "version": "1.0.0",
         "props": []
       },
@@ -692,9 +1158,41 @@
         "title": "Toggle Button",
         "desc": "Toggle Button можно использовать для группировки связанных параметров.",
         "link": "toggle",
-        "install": ["npm install @bit/bcc.components.bcc-toggle-button"],
+        "install": [
+          "npm install @bit/bcc.components.bcc-toggle-button-group",
+          "npm install @bit/bcc.components.bcc-toggle-button"
+        ],
         "version": "1.0.0",
-        "props": []
+        "props": [
+          {
+            "id": 303001,
+            "name": "className",
+            "type": "object",
+            "default": "",
+            "desc": "Переопределить или расширить стили, примененные к компоненту."
+          },
+          {
+            "id": 303004,
+            "name": "onChange",
+            "type": "func",
+            "default": "",
+            "desc": "Callback срабатывает при изменении значения."
+          },
+          {
+            "id": 303004,
+            "name": "value(BccToggleButton)*",
+            "type": "any",
+            "default": "false",
+            "desc": "Значение, связываемое с кнопкой при выборе в BccToggleButtonGroup."
+          },
+          {
+            "id": 303004,
+            "name": "selected(BccToggleButton)",
+            "type": "boolean",
+            "default": "false",
+            "desc": "Если true, кнопка будет отображаться в активном состоянии."
+          }
+        ]
       }
     ]
   }

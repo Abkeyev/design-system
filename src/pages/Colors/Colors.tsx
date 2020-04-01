@@ -3,6 +3,7 @@ import { useHistory, NavLink } from 'react-router-dom'
 import { Grid, Snackbar } from '@material-ui/core'
 import MuiAlert, { AlertProps } from '@material-ui/lab/Alert'
 import './Colors.css'
+import BccTypography from '@bit/bcc.components.bcc-typography'
 
 function Alert(props: AlertProps) {
   return <MuiAlert elevation={6} variant="filled" {...props} />
@@ -92,6 +93,12 @@ const Colors = () => {
 
   return (
     <Fragment>
+      <div className="wrapper">
+        <img src={process.env.PUBLIC_URL + '/colors.svg'} alt="Grid" />
+      </div>
+      <BccTypography block type="h4" className="descTitle">
+        Полный набор цветов в интерфейсе
+      </BccTypography>
       <Grid
         container
         direction="row"

@@ -6,21 +6,20 @@ import {
   createStyles,
 } from '@material-ui/core/styles'
 import Avatar from '@material-ui/core/Avatar'
-import theme from '../../../theme'
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
     green: {
-      color: `${theme.palette.common.white}!important`,
-      backgroundColor: `${theme.palette.primary.main}!important`,
+      color: 'white!important',
+      backgroundColor: '#27AE60!important',
     },
   })
 )
 
 const BccAvatar = withStyles({
   root: {
-    backgroundColor: theme.palette.common.white,
-    color: theme.palette.grey[500],
+    backgroundColor: 'white',
+    color: '#4D565F',
   },
 })((props: any) => {
   const classes = useStyles()

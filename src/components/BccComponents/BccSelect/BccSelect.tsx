@@ -1,20 +1,19 @@
-import { withStyles, makeStyles, Theme, createStyles } from '@material-ui/core/styles'
+import { makeStyles, Theme, createStyles } from '@material-ui/core/styles'
 import React from 'react'
-import theme from '../../../theme'
 import Select from 'react-select'
 import './BccSelect.css'
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
     selectWrap: {
-      display: 'inline-block'
+      display: 'inline-block',
     },
     errorText: {
-      color: theme.palette.error.main,
+      color: '#C84F4F',
       fontSize: 12,
       display: 'inline-block',
       marginTop: 4,
-    }
+    },
   })
 )
 
@@ -24,7 +23,7 @@ const BccSelect = (props: any) => {
   const customStyles = {
     option: (provided: any, state: any) => ({
       ...provided,
-      color: state.isSelected ? theme.palette.primary.main : theme.palette.grey[600],
+      color: state.isSelected ? '#27AE60' : '#000D1A',
       padding: '16px 20px',
       backgroundColor: state.isFocused ? '#E9F7EF' : '',
     }),
@@ -32,18 +31,22 @@ const BccSelect = (props: any) => {
       ...provided,
       // none of react-select's styles are passed to <Control />
       minHeight: 56,
-      border: state.isFocused ? '1px solid #27AE60' : props.error ? '1px solid #C84F4F' : state.isDisabled ? '0px solid #F3F3F3' : '1px solid #E8E8E8',
+      border: state.isFocused
+        ? '1px solid #27AE60'
+        : props.error
+        ? '1px solid #C84F4F'
+        : state.isDisabled
+        ? '0px solid #F3F3F3'
+        : '1px solid #E8E8E8',
       boxShadow: 'none',
       '&:hover': {
         borderColor: '#B9B9B9',
       },
     }),
-    placeholder: () => ({
-
-    }),
+    placeholder: () => ({}),
     multiValue: (provided: any, state: any) => ({
       ...provided,
-      backgroundColor: '#E9F7EF'
+      backgroundColor: '#E9F7EF',
     }),
     multiValueRemove: (provided: any, state: any) => ({
       ...provided,
@@ -51,15 +54,15 @@ const BccSelect = (props: any) => {
       fontSize: 16,
       '&:hover': {
         backgroundColor: 'rgba(0,0,0,0)',
-        color: 'black'
-      }
+        color: 'black',
+      },
     }),
     valueContainer: (provided: any, state: any) => ({
       ...provided,
-      padding: '20px'
+      padding: '20px',
     }),
     indicatorSeparator: () => ({
-      display: 'none'
+      display: 'none',
     }),
     container: (provided: any, state: any) => ({
       ...provided,
@@ -78,7 +81,7 @@ const BccSelect = (props: any) => {
       textAlign: 'left',
       padding: '16px 20px',
       borderTop: '1px solid #F3F3F3',
-      fontWeight: 'normal'
+      fontWeight: 'normal',
     }),
     menu: (provided: any, state: any) => ({
       ...provided,
@@ -98,8 +101,19 @@ const BccSelect = (props: any) => {
     },
   }
 
-  return <div className={classes.selectWrap}><Select noOptionsMessage={() => "Вариантов не наидено"} classNamePrefix="react-select" styles={customStyles} {...props} />
-    {props.error && <span className={classes.errorText}>{props.errorText}</span>}</div>
+  return (
+    <div className={classes.selectWrap}>
+      <Select
+        noOptionsMessage={() => 'Вариантов не наидено'}
+        classNamePrefix="react-select"
+        styles={customStyles}
+        {...props}
+      />
+      {props.error && (
+        <span className={classes.errorText}>{props.errorText}</span>
+      )}
+    </div>
+  )
 }
 
 export default BccSelect

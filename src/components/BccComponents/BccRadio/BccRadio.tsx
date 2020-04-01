@@ -1,16 +1,18 @@
 import { withStyles } from '@material-ui/core/styles'
 import Radio from '@material-ui/core/Radio'
-import theme from '../../../theme'
 
 const BccRadio = withStyles({
   root: {
-    color: theme.palette.grey[500],
+    color: '#4D565F',
     '&.Mui-checked': {
-      color: theme.palette.primary.main,
+      color: '#27AE60',
+    },
+    '& .MuiSvgIcon-root': {
+      fontSize: 24,
     },
     '&.Mui-disabled': {
       '&.Mui-checked': {
-        color: theme.palette.grey[300],
+        color: '#B3B6BA',
       },
     },
   },

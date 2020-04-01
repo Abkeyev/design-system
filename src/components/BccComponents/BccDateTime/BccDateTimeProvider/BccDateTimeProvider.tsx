@@ -1,7 +1,9 @@
 import { MuiPickersUtilsProvider } from '@material-ui/pickers'
 import { withStyles } from '@material-ui/core/styles'
-import Tooltip from '@material-ui/core/Tooltip'
+import React from 'react'
 
-const BccDateTimeProvider = withStyles({})(MuiPickersUtilsProvider)
+const BccDateTimeProvider = withStyles({})((props: any) => (
+  <MuiPickersUtilsProvider {...props} />
+))
 
 export default BccDateTimeProvider

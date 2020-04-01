@@ -1,0 +1,22 @@
+.wrapper {
+  & > img {
+    width: 60%;
+    margin-bottom: 30px;
+    margin: 0 auto;
+    display: block;
+  }
+}
+.descTitle {
+  margin-bottom: 15px !important;
+}
+.grid {
+  background-color: #f3f3f3;
+  height: 60px;
+  line-height: 60px;
+  border-radius: 4px;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 500;
+  padding: 0 10px;
+  margin-bottom: 20px !important;
+}
