@@ -6,23 +6,27 @@
     "submenu": [
       {
         "id": 11,
-        "title": "Использование",
-        "link": "usage"
+        "title": "Как использовать",
+        "link": "usage",
+        "submenu": []
       },
       {
         "id": 12,
         "title": "Цвета",
-        "link": "colors"
+        "link": "colors",
+        "submenu": []
       },
       {
         "id": 13,
         "title": "Сетка",
-        "link": "grid"
+        "link": "grid",
+        "submenu": []
       },
       {
         "id": 14,
         "title": "Типографика",
-        "link": "typography"
+        "link": "typography",
+        "submenu": []
       }
     ]
   },

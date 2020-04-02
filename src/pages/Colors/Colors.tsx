@@ -2,8 +2,11 @@ import React, { Fragment } from 'react'
 import { useHistory, NavLink } from 'react-router-dom'
 import { Grid, Snackbar } from '@material-ui/core'
 import MuiAlert, { AlertProps } from '@material-ui/lab/Alert'
-import './Colors.css'
 import BccTypography from '@bit/bcc.components.bcc-typography'
+import { Menu } from '../../components/Sidebar/Sidebar'
+import { animateScroll } from 'react-scroll'
+
+const menu: Menu[] = require('../../data/menu.json')
 
 function Alert(props: AlertProps) {
   return <MuiAlert elevation={6} variant="filled" {...props} />
@@ -80,7 +83,8 @@ const colors = [
   },
 ]
 
-const Colors = () => {
+const Colors = (props: any) => {
+  animateScroll.scrollToTop(0)
   const history = useHistory()
   const [open, setOpen] = React.useState(false)
   const [color, setColor] = React.useState('')
@@ -94,7 +98,7 @@ const Colors = () => {
   return (
     <Fragment>
       <div className="wrapper">
-        <img src={process.env.PUBLIC_URL + '/colors.svg'} alt="Grid" />
+        <img src={process.env.PUBLIC_URL + '/colors.svg'} alt="Colors" />
       </div>
       <BccTypography block type="h4" className="descTitle">
         Полный набор цветов в интерфейсе
@@ -104,7 +108,7 @@ const Colors = () => {
         direction="row"
         justify="flex-start"
         alignItems="flex-start"
-        className="content-block"
+        className="descTitle"
         spacing={4}
       >
         {colors.map(c => (
@@ -122,6 +126,20 @@ const Colors = () => {
           </Grid>
         ))}
       </Grid>
+      <BccTypography block type="h4" className="descTitle">
+        Далее
+      </BccTypography>
+      <NavLink to="/overview/grid">
+        <img
+          onClick={() => props.setRoute(2)}
+          className="imgNext"
+          src={process.env.PUBLIC_URL + '/grid.svg'}
+          alt="Grid"
+        />
+      </NavLink>
+      <BccTypography block type="p2" className="descTitle">
+        Сетка
+      </BccTypography>
       <Snackbar
         open={open}
         autoHideDuration={1500}

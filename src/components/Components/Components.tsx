@@ -2454,8 +2454,7 @@ function getComponents(name: string) {
 export const Components = (props: any) => {
   const item = props.item
   let components = getComponents(item.link)
-  console.log(item)
-  let install = item.install.join('\n')
+  let install = item.install && item.install.join('\n')
   return (
     <>
       <BccTypography block type="h4" className="descTitle">

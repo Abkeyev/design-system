@@ -1,6 +1,7 @@
 .elements {
   display: flex;
-  flex-wrap: wrap; }
+  flex-wrap: wrap;
+  margin-bottom: 32px; }
   .elements > * {
     margin-right: 10px !important;
     margin-bottom: 10px !important;
@@ -12,12 +13,12 @@
 .installTitle,
 .componentTitle,
 .componentDesc {
-  margin-bottom: 15px !important; }
+  margin-bottom: 24px !important; }
 
 .desc,
 .install,
 .componentCode {
-  margin-bottom: 20px !important; }
+  margin-bottom: 24px !important; }
 
 .componentCode {
   margin-top: 15px !important; }
