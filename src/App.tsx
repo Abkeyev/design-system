@@ -85,7 +85,12 @@ const App = () => {
                     </BccTypography>
                   </BccBreadcrumbs>
                 </BccTypography>
-                <BccTypography type="h3" weight="normal" className="title">
+                <BccTypography
+                  type="h3"
+                  block
+                  weight="normal"
+                  className="title"
+                >
                   {item.title}{' '}
                   {item.version && (
                     <BccChip size="small" label={`v${item.version}`} />
