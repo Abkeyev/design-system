@@ -50,7 +50,7 @@ const App = () => {
   }
 
   return (
-    <BrowserRouter>
+    <BrowserRouter basename={`${process.env.PUBLIC_URL}/`}>
       <MuiThemeProvider theme={theme}>
         <Sidebar
           parent={parent}
