@@ -40,7 +40,6 @@
     "@bit/bcc.components.bcc-dialog-title": "^1.0.0",
     "@bit/bcc.components.bcc-grid": "^1.0.0",
     "@bit/bcc.components.bcc-icon-button": "^1.0.0",
-    "@bit/bcc.components.bcc-input": "^1.0.0",
     "@bit/bcc.components.bcc-slider": "^1.0.0",
     "@bit/bcc.components.bcc-snackbar": "^1.0.0",
     "@bit/bcc.components.bcc-step": "^1.0.0",

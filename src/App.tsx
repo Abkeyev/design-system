@@ -64,74 +64,88 @@ const App = () => {
         />
         <Switch>
           <div className="container">
-            {item && parent && (
-              <>
-                <BccTypography block type="p4" className="breadcrumbs">
-                  <BccBreadcrumbs>
-                    <NavLink
-                      onClick={() => {
-                        setItem('')
-                        setParent('')
-                      }}
-                      to="/"
+            <div className="bccContainer">
+              <div className="bccConteinerInner">
+                {item && parent && (
+                  <>
+                    <BccTypography block type="p4" className="breadcrumbs">
+                      <BccBreadcrumbs>
+                        <NavLink
+                          onClick={() => {
+                            setItem('')
+                            setParent('')
+                          }}
+                          to="/"
+                        >
+                          BCC Design System
+                        </NavLink>
+                        <BccTypography type="p4" className="last-crumb">
+                          {parent.title}
+                        </BccTypography>
+                        <BccTypography type="p4" className="last-crumb">
+                          {item.title}
+                        </BccTypography>
+                      </BccBreadcrumbs>
+                    </BccTypography>
+                    <BccTypography
+                      type="h3"
+                      block
+                      weight="normal"
+                      className="title"
                     >
-                      BCC Design System
-                    </NavLink>
-                    <BccTypography type="p4" className="last-crumb">
-                      {parent.title}
+                      {item.title}{' '}
+                      {item.version && (
+                        <BccChip size="small" label={`v${item.version}`} />
+                      )}
                     </BccTypography>
-                    <BccTypography type="p4" className="last-crumb">
-                      {item.title}
-                    </BccTypography>
-                  </BccBreadcrumbs>
-                </BccTypography>
-                <BccTypography
-                  type="h3"
-                  block
-                  weight="normal"
-                  className="title"
-                >
-                  {item.title}{' '}
-                  {item.version && (
-                    <BccChip size="small" label={`v${item.version}`} />
+                  </>
+                )}
+              </div>
+            </div>
+            <div className="container-block bccContainer">
+              <div className="bccConteinerInner">
+                <Route
+                  path="/"
+                  render={() => <Redirect to="/overview/usage" />}
+                  exact
+                />
+                <Route
+                  path="/overview/usage"
+                  render={() => (
+                    <Usage
+                      setRoute={(index: number) => handleSetRoute(index)}
+                    />
                   )}
-                </BccTypography>
-              </>
-            )}
-            <div className="container-block">
-              <Route
-                path="/"
-                render={() => <Redirect to="/overview/usage" />}
-                exact
-              />
-              <Route
-                path="/overview/usage"
-                render={() => (
-                  <Usage setRoute={(index: number) => handleSetRoute(index)} />
-                )}
-                exact
-              />
-              <Route
-                path="/overview/colors"
-                render={() => (
-                  <Colors setRoute={(index: number) => handleSetRoute(index)} />
-                )}
-                exact
-              />
-              <Route
-                path="/overview/grid"
-                render={() => (
-                  <Grid setRoute={(index: number) => handleSetRoute(index)} />
-                )}
-                exact
-              />
-              <Route path="/overview/typography" component={Typography} exact />
-              <Route
-                path="/components/:itemId"
-                render={props => (
-                  <Components {...props} item={item} parent={parent} />
-                )}
-              />
+                  exact
+                />
+                <Route
+                  path="/overview/colors"
+                  render={() => (
+                    <Colors
+                      setRoute={(index: number) => handleSetRoute(index)}
+                    />
+                  )}
+                  exact
+                />
+                <Route
+                  path="/overview/grid"
+                  render={() => (
+                    <Grid setRoute={(index: number) => handleSetRoute(index)} />
+                  )}
+                  exact
+                />
+                <Route
+                  path="/overview/typography"
+                  component={Typography}
+                  exact
+                />
+                <Route
+                  path="/components/:itemId"
+                  render={props => (
+                    <Components {...props} item={item} parent={parent} />
+                  )}
+                />
+              </div>
             </div>
           </div>
         </Switch>

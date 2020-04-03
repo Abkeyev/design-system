@@ -16,6 +16,7 @@ const BccInput = withStyles({
     },
     '& .MuiInputLabel-outlined': {
       color: '#4D565F',
+      fontSize: 16,
       '&.Mui-focused': {
         color: '#4D565F',
         '&.Mui-error': {
@@ -29,6 +30,7 @@ const BccInput = withStyles({
     },
     '& .MuiInputLabel-filled': {
       color: '#4D565F',
+      fontSize: 16,
       '&.Mui-focused': {
         color: '#4D565F',
         '&.Mui-error': {
