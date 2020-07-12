@@ -3,6 +3,7 @@ import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter'
 import { prism } from 'react-syntax-highlighter/dist/esm/styles/prism'
 import {
   BccButton,
+  BccBadge,
   BccTypography,
   BccIconButton,
   BccInput,
@@ -36,22 +37,19 @@ import {
   BccSnackbarEx,
   BccTableEx,
   BccSliderEx,
+  BccAlert,
+  BccAlertTitle,
+  BccToggleButton,
+  BccToggleButtonGroup,
+  BccTable,
+  BccTableCell,
+  BccTableBody,
+  BccTableContainer,
+  BccTableHead,
+  BccTableRow,
 } from '../BccComponents'
 
-import BccBadge from '@bit/bcc.components.bcc-badge'
-import BccAlert from '@bit/bcc.components.bcc-alert'
-import BccAlertTitle from '@bit/bcc.components.bcc-alert-title'
-import BccToggleButton from '@bit/bcc.components.bcc-toggle-button'
-import BccToggleButtonGroup from '@bit/bcc.components.bcc-toggle-button-group'
-
 import './Components.css'
-
-import BccTable from '@bit/bcc.components.bcc-table'
-import BccTableCell from '@bit/bcc.components.bcc-table-cell'
-import BccTableBody from '@bit/bcc.components.bcc-table-body'
-import BccTableContainer from '@bit/bcc.components.bcc-table-container'
-import BccTableHead from '@bit/bcc.components.bcc-table-head'
-import BccTableRow from '@bit/bcc.components.bcc-table-row'
 
 import DeleteIcon from '@material-ui/icons/Delete'
 import CloudUploadIcon from '@material-ui/icons/CloudUpload'

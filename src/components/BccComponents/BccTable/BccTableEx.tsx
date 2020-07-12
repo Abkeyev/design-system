@@ -1,12 +1,12 @@
 import React from 'react'
 import { makeStyles } from '@material-ui/core/styles'
 
-import BccTable from '@bit/bcc.components.bcc-table'
-import BccTableCell from '@bit/bcc.components.bcc-table-cell'
-import BccTableBody from '@bit/bcc.components.bcc-table-body'
-import BccTableContainer from '@bit/bcc.components.bcc-table-container'
-import BccTableHead from '@bit/bcc.components.bcc-table-head'
-import BccTableRow from '@bit/bcc.components.bcc-table-row'
+import BccTable from '../BccTable/BccTable'
+import BccTableCell from '../BccTable/BccTableCell/BccTableCell'
+import BccTableBody from '../BccTable/BccTableBody/BccTableBody'
+import BccTableContainer from '../BccTable/BccTableContainer/BccTableContainer'
+import BccTableHead from '../BccTable/BccTableHead/BccTableHead'
+import BccTableRow from '../BccTable/BccTableRow/BccTableRow'
 
 const useStyles = makeStyles({
   table: {

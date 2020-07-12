@@ -1,10 +1,10 @@
 import React from 'react'
-import BccDialog from '@bit/bcc.components.bcc-dialog'
-import BccDialogActions from '@bit/bcc.components.bcc-dialog-actions'
-import BccDialogTitle from '@bit/bcc.components.bcc-dialog-title'
-import BccDialogContent from '@bit/bcc.components.bcc-dialog-content'
-import BccButton from '@bit/bcc.components.bcc-button'
-import BccTypography from '@bit/bcc.components.bcc-typography'
+import BccDialog from '../BccDialog/BccDialog'
+import BccDialogActions from '../BccDialog/BccDialogActions/BccDialogActions'
+import BccDialogTitle from '../BccDialog/BccDialogTitle/BccDialogTitle'
+import BccDialogContent from '../BccDialog/BccDialogContent/BccDialogContent'
+import BccButton from '../BccButton/BccButton'
+import BccTypography from '../BccTypography/BccTypography'
 
 export default function CustomizedDialogs() {
   const [open, setOpen] = React.useState(false)
@@ -22,7 +22,6 @@ export default function CustomizedDialogs() {
         Открыть
       </BccButton>
       <BccDialog
-        fullScreen
         onClose={handleClose}
         aria-labelledby="customized-dialog-title"
         open={open}

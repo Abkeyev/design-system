@@ -9,7 +9,6 @@ const useStyles = makeStyles((theme: Theme) =>
       fontFamily: '"Roboto", "Helvetica", "Arial", sans-serif',
       fontSize: 18,
       lineHeight: '24px',
-      color: '#000D1A',
     },
     p1: {
       fontSize: 18,

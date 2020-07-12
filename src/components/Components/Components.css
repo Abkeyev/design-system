@@ -2,14 +2,12 @@
   display: flex;
   flex-wrap: wrap;
   margin-bottom: 32px; }
-
-.elements > * {
-  margin-right: 10px !important;
-  margin-bottom: 10px !important;
-  align-self: flex-start; }
-
-.elements > *:last-child {
-  margin-right: 0 !important; }
+  .elements > * {
+    margin-right: 10px !important;
+    margin-bottom: 10px !important;
+    align-self: flex-start; }
+  .elements > *:last-child {
+    margin-right: 0 !important; }
 
 .descTitle,
 .installTitle,

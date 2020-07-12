@@ -4,13 +4,13 @@ import { withStyles } from '@material-ui/core/styles'
 
 const BccSlider = withStyles({
   root: {
-    color: '#27AE60',
+    color: '#CCCFD1',
     '& .MuiSlider-mark': {
       width: 8,
       height: 8,
       top: -5,
       marginLeft: -5,
-      color: '#CCCFD1',
+      color: '#27AE60',
       border: '2px solid white',
       borderRadius: '50%',
     },
@@ -23,6 +23,7 @@ const BccSlider = withStyles({
       height: 14,
       border: '2px solid white',
       marginTop: -6,
+      backgroundColor: '#27AE60',
     },
     '& .MuiSlider-rail': {
       height: 2,
@@ -30,7 +31,7 @@ const BccSlider = withStyles({
     },
     '& .MuiSlider-track': {
       height: 2,
-      backgroundColor: '#1F7042',
+      backgroundColor: '#27AE60',
     },
     '& .Mui-focusVisible, & .MuiSlider-thumb:hover, & .MuiSlider-active': {
       boxShadow: 'none',

@@ -1,7 +1,7 @@
 import React from 'react'
 import { BccPopover } from '../../BccComponents'
-import BccTypography from '@bit/bcc.components.bcc-typography'
-import BccButton from '@bit/bcc.components.bcc-button'
+import BccTypography from '../BccTypography/BccTypography'
+import BccButton from '../BccButton/BccButton'
 import { makeStyles, createStyles, Theme } from '@material-ui/core/styles'
 
 const useStyles = makeStyles((theme: Theme) =>

@@ -2,7 +2,7 @@ import React, { Fragment } from 'react'
 import { useHistory, NavLink } from 'react-router-dom'
 import { Grid, Snackbar } from '@material-ui/core'
 import MuiAlert, { AlertProps } from '@material-ui/lab/Alert'
-import BccTypography from '@bit/bcc.components.bcc-typography'
+import BccTypography from '../../components/BccComponents/BccTypography/BccTypography'
 import { Menu } from '../../components/Sidebar/Sidebar'
 import { animateScroll } from 'react-scroll'
 

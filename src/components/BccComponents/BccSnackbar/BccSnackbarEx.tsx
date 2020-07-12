@@ -1,7 +1,7 @@
 import React from 'react'
-import BccButton from '@bit/bcc.components.bcc-button'
-import BccAlert from '@bit/bcc.components.bcc-alert'
-import BccSnackbar from '@bit/bcc.components.bcc-snackbar'
+import BccButton from '../BccButton/BccButton'
+import BccAlert from '../BccAlert/BccAlert'
+import BccSnackbar from '../BccSnackbar/BccSnackbar'
 
 export default function BccSnackbarEx() {
   const [open, setOpen] = React.useState(false)

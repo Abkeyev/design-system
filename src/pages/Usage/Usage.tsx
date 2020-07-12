@@ -1,7 +1,7 @@
 import React from 'react'
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter'
 import { prism } from 'react-syntax-highlighter/dist/esm/styles/prism'
-import BccTypography from '@bit/bcc.components.bcc-typography'
+import BccTypography from '../../components/BccComponents/BccTypography/BccTypography'
 import { NavLink } from 'react-router-dom'
 import { Menu } from '../../components/Sidebar/Sidebar'
 import { animateScroll } from 'react-scroll'

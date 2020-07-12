@@ -1,10 +1,10 @@
 import React from 'react'
 import { makeStyles, Theme, createStyles } from '@material-ui/core/styles'
-import BccStepLabel from '@bit/bcc.components.bcc-step-label'
-import BccStepper from '@bit/bcc.components.bcc-stepper'
-import BccStep from '@bit/bcc.components.bcc-step'
-import BccButton from '@bit/bcc.components.bcc-button'
-import BccTypography from '@bit/bcc.components.bcc-typography'
+import BccStepLabel from '../BccStepper/BccStepLabel/BccStepLabel'
+import BccStepper from '../BccStepper/BccStepper'
+import BccStep from '../BccStepper/BccStep/BccStep'
+import BccButton from '../BccButton/BccButton'
+import BccTypography from '../BccTypography/BccTypography'
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({

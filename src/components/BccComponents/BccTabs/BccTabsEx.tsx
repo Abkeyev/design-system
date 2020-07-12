@@ -1,6 +1,6 @@
 import React from 'react'
-import BccTab from '@bit/bcc.components.bcc-tab'
-import BccTabs from '@bit/bcc.components.bcc-tabs'
+import BccTab from '../BccTabs/BccTab/BccTab'
+import BccTabs from '../BccTabs/BccTabs'
 
 import { makeStyles, createStyles, Theme } from '@material-ui/core/styles'
 

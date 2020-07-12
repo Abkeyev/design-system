@@ -1,6 +1,5 @@
 import React from 'react'
-import BccGrid from '@bit/bcc.components.bcc-grid'
-import BccTypography from '@bit/bcc.components.bcc-typography'
+import { BccGrid, BccTypography } from '../../components/BccComponents'
 import { NavLink } from 'react-router-dom'
 import { animateScroll } from 'react-scroll'
 

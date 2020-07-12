@@ -1,8 +1,8 @@
 import React from 'react'
-import BccCollapseDetails from '@bit/bcc.components.bcc-collapse-details'
-import BccCollapsePanel from '@bit/bcc.components.bcc-collapse-panel'
-import BccCollapseTitle from '@bit/bcc.components.bcc-collapse-title'
-import BccTypography from '@bit/bcc.components.bcc-typography'
+import BccCollapseDetails from '../BccCollapse/BccCollapseDetails/BccCollapseDetails'
+import BccCollapsePanel from '../BccCollapse/BccCollapsePanel/BccCollapsePanel'
+import BccCollapseTitle from '../BccCollapse/BccCollapseTitle/BccCollapseTitle'
+import BccTypography from '../BccTypography/BccTypography'
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore'
 import { createStyles, Theme, makeStyles } from '@material-ui/core/styles'
 

@@ -1,6 +1,6 @@
 import Stepper from '@material-ui/core/Stepper'
 import { withStyles } from '@material-ui/core/styles'
-import BccStepConnector from '@bit/bcc.components.bcc-step-connector'
+import BccStepConnector from '../BccStepper/BccStepConnector/BccStepConnector'
 import React from 'react'
 
 const BccStepper = withStyles({

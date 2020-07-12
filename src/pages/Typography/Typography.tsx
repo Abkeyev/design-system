@@ -1,11 +1,13 @@
 import React from 'react'
-import BccTypography from '@bit/bcc.components.bcc-typography'
-import BccTable from '@bit/bcc.components.bcc-table'
-import BccTableCell from '@bit/bcc.components.bcc-table-cell'
-import BccTableBody from '@bit/bcc.components.bcc-table-body'
-import BccTableContainer from '@bit/bcc.components.bcc-table-container'
-import BccTableHead from '@bit/bcc.components.bcc-table-head'
-import BccTableRow from '@bit/bcc.components.bcc-table-row'
+import {
+  BccTypography,
+  BccTable,
+  BccTableCell,
+  BccTableBody,
+  BccTableContainer,
+  BccTableHead,
+  BccTableRow,
+} from '../../components/BccComponents'
 import { animateScroll } from 'react-scroll'
 
 const Typography = () => {

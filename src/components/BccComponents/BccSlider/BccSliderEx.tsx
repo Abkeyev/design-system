@@ -1,6 +1,6 @@
 import React from 'react'
-import BccInput from '@bit/bcc.components.bcc-input'
-import { BccSlider } from '../../BccComponents'
+import BccInput from '../BccInput/BccInput'
+import { BccSlider } from '../index'
 import { createStyles, Theme, makeStyles } from '@material-ui/core/styles'
 
 const useStyles = makeStyles((theme: Theme) =>
